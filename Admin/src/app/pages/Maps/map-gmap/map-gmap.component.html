@@ -1,0 +1,42 @@
+<app-breadcrumb [Title]="'Maps'" [pageTitle]="'Gmap'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <h5>Gmap</h5>
+    <p class="text-muted">Converts an elements content into a svg mini pie donut line or bar chart and is compatible
+      with any browser that supports svg</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://developers.google.com/maps/documentation/javascript/libraries">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <!-- [ sample-page ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Gmap</h5>
+      </div>
+      <div class="card-body">
+        <google-map width="100%" height="260px" [center]="center" [zoom]="zoom">
+        </google-map>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body overflow-hidden">
+        <iframe width="600" height="450" style="border: 0" loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=
+&q=Space+Needle,Seattle+WA">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <!-- [ sample-page ] end -->
+</div>

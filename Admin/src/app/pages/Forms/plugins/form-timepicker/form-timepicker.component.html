@@ -1,0 +1,52 @@
+<app-breadcrumb [Title]="'Forms'" [pageTitle]="'Timepicker'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ form-element ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Preview</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">Simple Input</label>
+            <div class="col-lg-4 col-md-9 col-sm-12">
+              <input class="form-control" mwlFlatpickr [flatpickrOptions]="{'noCalendar':true,'dateFormat':'H:i','time_24hr':true,'enableTime':true}" data-provider="timepickr" data-time-basic="true" placeholder="Select Time">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">With Input Group</label>
+            <div class="col-lg-4 col-md-9 col-sm-12">
+              <div class="input-group timepicker">
+                <input class="form-control" mwlFlatpickr [flatpickrOptions]="{'noCalendar':true,'dateFormat':'H:i','time_24hr':true,'enableTime':true}" placeholder="Select time" type="text" data-provider="timepickr" data-time-inline="11:42">
+                <span class="input-group-text">
+                  <i class="feather icon-clock"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">24 Hours</label>
+            <div class="col-lg-4 col-md-9 col-sm-12">
+              <input class="form-control" mwlFlatpickr [flatpickrOptions]="{'noCalendar':true,'dateFormat':'H:i','time_24hr':true,'enableTime':true}" placeholder="Select time" type="text" data-provider="timepickr" data-time-inline="11:42" type="text" >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">Time Picker w/ Limits</label>
+            <div class="col-lg-4 col-md-9 col-sm-12">
+              <input class="form-control" mwlFlatpickr [flatpickrOptions]="{'noCalendar':true,'dateFormat':'H:i','time_24hr':true,'enableTime':true}" placeholder="Select time" type="text" data-provider="timepickr" data-time-inline="11:42" type="text" >
+            </div>
+          </div>
+          <div class="form-group row mb-0">
+            <label class="col-form-label col-lg-3 col-sm-12 text-lg-end">Preloading Time</label>
+            <div class="col-lg-4 col-md-9 col-sm-12">
+              <input class="form-control" mwlFlatpickr [flatpickrOptions]="{'noCalendar':true,'dateFormat':'H:i','time_24hr':true,'enableTime':true}" placeholder="13:45" type="text" data-provider="timepickr" data-time-inline="11:42" type="text" >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- [ form-element ] end -->
+</div>

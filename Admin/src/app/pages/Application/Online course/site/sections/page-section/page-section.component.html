@@ -1,0 +1,80 @@
+<div class="card table-card border shadow-none">
+    <div class="card-header pb-0 pt-2">
+        <ul class="nav nav-tabs profile-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" [ngClass]="{'active': selectedTab === 'school'}" (click)="selectTab('school')" type="button" role="tab">School Pages</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" [ngClass]="{'active': selectedTab === 'product'}" (click)="selectTab('product')" type="button" role="tab">Product Pages</button>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body pb-0">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade" [ngClass]="{'show active': selectedTab === 'school'}" role="tabpanel" tabindex="0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Page Title</th>
+                                <th>URL</th>
+                                <th>State</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let page of schoolPages">
+                                <td>{{ page.title }}</td>
+                                <td>{{ page.url }}</td>
+                                <td><span class="badge" [ngClass]="{'text-bg-success': page.state === 'Published', 'text-bg-danger': page.state === 'Unpublished'}">{{ page.state }}</span></td>
+                                <td>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-eye f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-edit f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-trash f-20"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" [ngClass]="{'show active': selectedTab === 'product'}" role="tabpanel" tabindex="0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>Page Title</th>
+                                <th>URL</th>
+                                <th>State</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let page of productPages">
+                                <td>{{ page.title }}</td>
+                                <td>{{ page.url }}</td>
+                                <td><span class="badge" [ngClass]="{'text-bg-success': page.state === 'Published', 'text-bg-danger': page.state === 'Unpublished'}">{{ page.state }}</span></td>
+                                <td>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-eye f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-edit f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-trash f-20"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

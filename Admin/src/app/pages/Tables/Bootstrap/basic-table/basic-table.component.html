@@ -1,0 +1,168 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Bootstrap Table'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Table</h5>
+        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+  <!-- [ Hover-table ] start -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Hover Table</h5>
+        <span class="d-block m-t-5">use class <code>table-hover</code> inside table element</span>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- [ Hover-table ] end -->
+  <!-- [ dark-table ] start -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Dark Table</h5>
+        <span class="d-block m-t-5">use class <code>table-dark</code> inside table element</span>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- [ dark-table ] end -->
+  <!-- [ stiped-table ] start -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Striped Table</h5>
+        <span class="d-block m-t-5">use class <code>table-striped</code> inside table element</span>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ stiped-table ] end -->
+  <!-- [ Contextual-table ] start -->
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Contextual Classes</h5>
+        <span class="d-block m-t-5">For Make row Contextual add Contextual class like <code>.table-success</code>
+          in <code> tr tag</code> and For cell add
+          Contextual class in <code> td or th tag</code> .</span>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of usersTwo; let i = index" [ngClass]="user.rowClass">
+                <td>{{ i + 1 }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ Contextual-table ] end -->
+</div>

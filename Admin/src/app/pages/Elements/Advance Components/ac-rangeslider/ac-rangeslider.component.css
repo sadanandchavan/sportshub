@@ -1,0 +1,24 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px; /* Space between slider and other content */
+}
+
+.slider-custom {
+  margin-bottom: 10px; /* Space between slider and highlights */
+}
+
+.slider-ranges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Ensure highlights don't interfere with slider interaction */
+}
+
+.slider-highlight {
+  position: absolute;
+  height: 100%;
+  pointer-events: none; /* Ensure highlights don't interfere with slider interaction */
+}

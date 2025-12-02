@@ -1,0 +1,12 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-reset-password-v2',
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, CommonModule],
+  templateUrl: './reset-password-v2.component.html',
+  styleUrl: './reset-password-v2.component.css',
+})
+export class ResetPasswordV2Component {}

@@ -1,0 +1,29 @@
+<app-breadcrumb [Title]="'Icons'" [pageTitle]="'Custom Icon'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- [ custom-icon ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Custom Icon</h5>
+        <p>Use svg icon with <code>&lt;use&gt;</code> in you html code as given below</p>
+        <code>
+          &lt;svg class="pc-icon"&gt;
+          &lt;use xlink:href="#custom-&lt;&lt; Copied code &gt;&gt;"&gt;&lt;/use&gt;
+          &lt;/svg&gt;
+        </code>
+      </div>
+      <div class="card-body text-center">
+        <div class="i-main" id="icon-wrapper">
+          <div class="i-block" *ngFor="let iconId of iconList" [attr.data-clipboard-text]="iconId" [attr.data-filter]="iconId" [attr.aria-label]="iconId" [attr.data-bs-original-title]="iconId">
+            <svg class="pc-icon">
+              <use [attr.xlink:href]="'#' + iconId"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ custom-icon ] end -->
+</div>

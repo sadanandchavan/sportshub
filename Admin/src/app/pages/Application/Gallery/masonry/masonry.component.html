@@ -1,0 +1,81 @@
+<app-breadcrumb [Title]="'Gallery'" [pageTitle]="'Masonry'"></app-breadcrumb>
+
+<!-- [ Main Content ] start -->
+<div class="row">
+    <!-- prettier-ignore -->
+    <div class="col-md-10 col-xxl-9 mb-4">
+        <h5>Isotope</h5>
+        <p class="text-muted">powerful plug-in for displaying various types of sources—such as images, HTML videos, or YouTube videos—in a clean overlying box. Supports, among others, captions, thumbnails, and zooming</p>
+        <div>
+            <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank" href="https://isotope.metafizzy.co/">
+                <i class="ti ti-external-link me-1"></i>
+                Reference
+            </a>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <!-- [ sample-page ] start -->
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body border-bottom">
+                <div class="row align-items-center justify-content-between g-3">
+                    <div class="col-auto">
+                        <div id="filters" class="btn-filter btns-gallery">
+                            <button class="btn my-1 btn-sm btn-light-primary" (click)="filterImages(tabGrid.ShowAll)" [class.active]="currantTab === tabGrid.ShowAll" >Show all</button>
+                            <button class="btn my-1 btn-sm btn-light-primary" (click)="filterImages(tabGrid.WebDesigner)" [class.active]="currantTab === tabGrid.WebDesigner">Web Designer</button>
+                            <button class="btn my-1 btn-sm btn-light-primary" (click)="filterImages(tabGrid.GraphicDesigner)" [class.active]="currantTab === tabGrid.GraphicDesigner">Graphic Designer</button>
+                            <button class="btn my-1 btn-sm btn-light-primary" (click)="filterImages(tabGrid.AnimationDesigner)" [class.active]="currantTab === tabGrid.AnimationDesigner">Animation Designer</button>
+                            <button class="btn my-1 btn-sm btn-light-primary" (click)="filterImages(tabGrid.UiUxDesigner)" [class.active]="currantTab === tabGrid.UiUxDesigner">UI/UX Designer</button>
+                            <button class="btn my-1 btn-sm btn-light-primary" (click)="filterImages(tabGrid.ProductDesigner)" [class.active]="currantTab === tabGrid.ProductDesigner">Product Designer</button>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <ul class="list-inline d-flex align-items-center ms-auto my-1">
+                            <li class="list-inline-item">
+                                <select class="form-select">
+                                    <option>Sort By : Newest</option>
+                                    <option>Sort By : Newest</option>
+                                </select>
+                            </li>
+                            <li class="list-inline-item align-bottom">
+                                <a href="#" class="btn btn-primary">My Collection</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <!-- gallery.component.html -->
+                <div class="grid row g-3">
+                    <div class="col-xxl-3 col-md-4 col-sm-6 element-item web" *ngFor="let image of filteredImages">
+                        <a class="card-gallery" (click)="openLightbox(image)">
+                            <img class="img-fluid" [src]="image.src" [alt]="image.alt" loading="lazy" />
+                            <div class="gallery-hover-data card-body">
+                                <div class="position-relative text-end">
+                                    <div class="form-check prod-likes d-inline-block">
+                                        <i data-feather="heart" class="prod-likes-icon" aria-label="Like"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <div class="chat-avtar">
+                                            <img class="rounded-circle img-fluid wid-30" [src]="image.avatar" [alt]="image.avatarAlt" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 mx-2 text-white">
+                                        <p class="mb-0 text-truncate w-100">{{ image.name }}</p>
+                                        <span class="mb-0 text-sm text-truncate w-100">{{ image.role }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ sample-page ] end -->
+</div>
+<!-- [ Main Content ] end -->

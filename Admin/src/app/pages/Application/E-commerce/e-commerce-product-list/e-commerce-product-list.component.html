@@ -1,0 +1,78 @@
+<app-breadcrumb [Title]="'E-commerce'" [pageTitle]="'Products list'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ sample-page ] start -->
+  <div class="col-sm-12">
+    <div class="card table-card">
+      <div class="card-body">
+        <div class="text-end p-sm-4 pb-sm-2">
+          <a href="e-commerce-product-add" class="btn btn-primary"> <i class="ti ti-plus f-18"></i> Add
+            Product </a>
+        </div>
+        <div class="datatable-top">
+          <div class="datatable-dropdown">
+            <label>
+              <select [(ngModel)]="itemsPerPage" class="datatable-selector">
+                <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+              </select>entries per page
+            </label>
+          </div>
+          <!-- Search Input for First Table -->
+          <div class="datatable-search">
+            <input type="search" title="Search within table" aria-controls="pc-dt-simple" [(ngModel)]="searchText1" placeholder="Search..." class="datatable-input" />
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover tbl-product">
+            <thead>
+              <tr>
+                <th class="text-end">#</th>
+                <th>Product Detail</th>
+                <th>Categories</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Qty</th>
+                <th class="text-center">Brand</th>
+                <th class="text-center">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of filteredData  | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                <td class="text-end">{{ product.id }}</td>
+                <td>
+                  <div class="row">
+                    <div class="col-auto pe-0">
+                      <img [src]="product.img" alt="product-image" class="wid-40 rounded" />
+                    </div>
+                    <div class="col">
+                      <h6 class="mb-1">{{ product.name }}</h6>
+                      <p class="text-muted f-12 mb-0">{{ product.category }}</p>
+                    </div>
+                  </div>
+                </td>
+                <td>{{ product.category }}</td>
+                <td class="text-end">{{ product.price }}</td>
+                <td class="text-end">{{ product.qty }}</td>
+                <td class="text-center">
+                  <!-- <i [ngClass]="{'ph-duotone ph-check-circle': product.status === 'success', 'ph-duotone ph-clock-countdown': product.status === 'warning', 'ph-duotone ph-x-circle': product.status === 'danger'}"
+                    class="text-success f-24" [attr.data-bs-title]="product.status"></i> -->
+
+                  <i class="f-24 {{product.status}}" data-bs-toggle="tooltip" data-bs-title="success"></i>
+                </td>
+                <td class="text-center">
+                  <img [src]="product.brandImg" alt="brand-image" class="wid-40" />
+                  <!-- Add action links if needed -->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Pagination Controls -->
+          <div class="d-flex justify-content-end px-4">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ sample-page ] end -->
+</div>

@@ -1,0 +1,302 @@
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <a href="#" class="d-inline-flex align-items-center d-xl-none btn btn-dark mb-3" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas_component"><i class="ti ti-menu-2 me-2"></i>
+      Explore Components
+    </a>
+    <h2>Range Slider</h2>
+    <p class="text-muted">Create an input element in the DOM, and then create an instance of Slider</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://seiyria.com/bootstrap-slider/">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<!-- [ Main Content ] start -->
+<div class="row">
+  <!-- [ rangeslider ] start -->
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Basic example with custom formatter and colored selected region via CSS.</h6>
+        <hr />
+        <ngx-slider [(value)]="value" [options]="options"></ngx-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Range selector, options specified via data attribute.</h6>
+        <hr /> Filter by price interval: <b>€ 10</b>
+        <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options1"></ngx-slider>
+
+        <!-- Display the current range values -->
+        <div>
+          <p>Selected Range: {{ minValue }} - {{ maxValue }}</p>
+        </div>
+        <b>€ 1000</b>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Sliders can be enabled and disabled.</h6>
+        <hr />
+        <ngx-slider [(value)]="value2" [options]="options2" [disabled]="!sliderEnabled"></ngx-slider>
+
+        <label>
+          <input id="ex7-enabled" type="checkbox" [(ngModel)]="sliderEnabled" (change)="toggleSlider()" />
+          Enabled
+        </label>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Using events to work with the values and style the selection and handles via CSS.</h6>
+        <hr />
+        <p><b>R</b>
+          <ngx-slider [(value)]="rValue" [options]="rOptions" (valueChange)="updateColor()"></ngx-slider>
+        </p>
+
+        <p><b>G</b>
+          <ngx-slider [(value)]="gValue" [options]="gOptions" (valueChange)="updateColor()"></ngx-slider>
+        </p>
+
+        <p><b>B</b>
+          <ngx-slider [(value)]="bValue" [options]="bOptions" (valueChange)="updateColor()"></ngx-slider>
+        </p>
+
+        <div id="RGB" style="width: 100px; height: 100px; border: 1px solid #b8abab;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Vertical slider with reversed values (largest to smallest).</h6>
+        <hr />
+        <ngx-slider [(value)]="value4" [options]="options4" style="height: 300px;"></ngx-slider>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Unusual tooltip positions</h6>
+        <hr />
+
+        <ngx-slider [(value)]="valueA" [options]="optionsA" class="slider-custom"></ngx-slider>
+
+        <ngx-slider [(value)]="valueB" [options]="optionsB" class="slider-custom"></ngx-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Destroy instance of slider by calling <code>destroy()</code> method on slider instance via
+          JavaScript.</h6>
+        <hr />
+        <div *ngIf="showSlider">
+          <ngx-slider [(value)]="value5" [options]="options5" class="slider-custom"></ngx-slider>
+        </div>
+        <button id="destroyEx5Slider" class="btn btn-danger mt-2" (click)="toggleSlider5()">
+          Click to Destroy
+        </button>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Able to bind to 'slide' JQuery event on slider, which is triggered whenever the slider is used.
+        </h6>
+        <hr />
+        <div>
+          <ngx-slider [(value)]="value6" [options]="options6" class="slider-custom"></ngx-slider>
+        </div>
+        <span id="ex6CurrentSliderValLabel">
+          Current Slider Value: <span id="ex6SliderVal">{{ value6 }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Tooltip can always be displayed.</h6>
+        <hr />
+        <div>
+          <ngx-slider [(value)]="value8" [options]="options8" class="slider-custom"></ngx-slider>
+        </div>
+        <span id="ex8CurrentSliderValLabel">
+          Current Slider Value: <span id="ex8SliderVal">{{ value8 }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Precision (number of places after the decimal) can be specified.</h6>
+        <hr />
+        <div>
+          <ngx-slider [(value)]="value9" [options]="options9" class="slider-custom"></ngx-slider>
+        </div>
+        <span id="ex9CurrentSliderValLabel">
+          Current Slider Value: <span id="ex9SliderVal">{{ value9 }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Setting custom handlers.</h6>
+        <hr />
+        <div>
+          <ngx-slider [(value)]="value10" [options]="options10" class="slider-custom"></ngx-slider>
+        </div>
+        <span id="ex10CurrentSliderValLabel">
+          Current Slider Value: <span id="ex10SliderVal">{{ value10 }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Using a custom step interval.</h6>
+        <hr />
+        <div>
+          <ngx-slider [(value)]="value11" [options]="options11" class="slider-custom"></ngx-slider>
+        </div>
+        <span id="ex11CurrentSliderValLabel">
+          Current Slider Value: <span id="ex11SliderVal">{{ value11 }}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Coloring the low and high track segments.</h6>
+        <div>
+          <!-- Slider 1 -->
+          <ngx-slider [(value)]="value12a" [options]="options12a" class="slider-custom"></ngx-slider>
+          <br />
+          Note that there is no low track on the single-value slider. The area to the left of the handle is the
+          selection.
+          <br />
+
+          <ngx-slider [(value)]="minValue1" [(highValue)]="maxValue1" [options]="options12b"></ngx-slider>
+          <br />
+
+          <ngx-slider [(value)]="minValue2" [(highValue)]="maxValue2" [options]="options12c"></ngx-slider>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Using tick marks and labels.</h6>
+        <hr />
+        <div>
+          <ngx-slider [(value)]="value13" [options]="options13" class="slider-custom"></ngx-slider>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Using tick marks at specific positions.</h6>
+        <hr />
+        <ngx-slider [(value)]="value14" [options]="options14" class="slider-custom"></ngx-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>With a logarithmic scale.</h6>
+        <hr />
+        <ngx-slider [(value)]="value15" [options]="options15" class="slider-custom"></ngx-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Focus the slider handle after a value change.</h6>
+        <hr />
+        <ngx-slider [(value)]="value16" [options]="options16"></ngx-slider>
+        <br />
+        <ngx-slider [(value)]="minValue4" [(highValue)]="maxValue4" [options]="options17"></ngx-slider>
+        <br />
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Accessibility with ARIA labels</h6>
+        <hr />
+        <span id="ex18-label-1" class="hidden">Example slider label</span>
+        <ngx-slider [(value)]="value18" [options]="options18"></ngx-slider>
+        <div class="mt-3">
+          <span id="ex18-label-2a" class="hidden">Example low value</span>
+          <span id="ex18-label-2b" class="hidden">Example high value</span>
+          <ngx-slider [(value)]="minValue5" [(highValue)]="maxValue5" [options]="options19"></ngx-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Highlight ranges on slider with rangeHighlights attribute 14</h6>
+        <hr />
+        <ngx-slider [(value)]="value22" [options]="options22" class="slider-custom"></ngx-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Using tick marks at specific positions..</h6>
+        <hr />
+        <ngx-slider [(value)]="value23" [options]="options23" class="slider-custom"></ngx-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h6>Rtl mode (auto)</h6>
+        <hr />
+        <div class="well" dir="rtl">
+          <span>-5</span>
+          <ngx-slider [(value)]="value24" [options]="options24" class="slider-custom"></ngx-slider>
+          <span>20</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ rangeslider ] end -->
+</div>

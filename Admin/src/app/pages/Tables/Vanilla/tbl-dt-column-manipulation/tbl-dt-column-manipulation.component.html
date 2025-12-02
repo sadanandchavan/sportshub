@@ -1,0 +1,54 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Column Manipulation'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Column Manipulation</h5>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-column-manipulation">
+            <thead>
+              <tr>
+                <th (click)="sortData('Name')">Name</th>
+                <th (click)="sortData('Ext.')">Ext.</th>
+                <th (click)="sortData('City')">City</th>
+                <th (click)="sortData('Start Date')">Start Date</th>
+                <th>Completion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let row of tableData | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index">
+                <td>{{ row['Name'] }}</td>
+                <td>{{ row['Ext.'] }}</td>
+                <td>{{ row['City'] }}</td>
+                <td>{{ row['Start Date'] }}</td>
+                <td>
+                  <span style="width: 100px" class="d-inline-block">{{ row['Start Date'] }}</span>
+                  <button type="button" (click)="onButtonClick(i)" class="btn btn-sm btn-primary mx-2 notify">Click
+                    Me</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>

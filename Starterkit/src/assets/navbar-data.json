@@ -1,0 +1,182 @@
+[
+  {
+    "menuName": "Pages",
+    "menuItems": [{
+        "text": "Authentication",
+        "icon": "ph-shield-checkered",
+        "isLeadingPageIcon": false,
+        "subMenus": [{
+            "text": "Authentication 1",
+
+            "innerSubMenu": [{
+                "text": "Login",
+                "link": "/login-v1"
+              },
+              {
+                "text": "Register",
+                "link": "/register-v1"
+              },
+              {
+                "text": "Forgot Password",
+                "link": "/forgot-password-v1"
+              },
+              {
+                "text": "reset password",
+                "link": "/reset-password-v1"
+              },
+              {
+                "text": "code verification",
+                "link": "/code-verification-v1"
+              }
+            ]
+          },
+          {
+            "text": "Authentication 2",
+            "innerSubMenu": [{
+                "text": "Login",
+                "link": "/login-v2"
+              },
+              {
+                "text": "Register",
+                "link": "/register-v2"
+              },
+              {
+                "text": "Forgot Password",
+                "link": "/forgot-password-v2"
+              },
+              {
+                "text": "reset password",
+                "link": "/reset-password-v2"
+              },
+              {
+                "text": "code verification",
+                "link": "/code-verification-v2"
+              }
+            ]
+          },
+          {
+            "text": "Login Modal",
+            "link": "/login-modal"
+          }
+        ]
+      },
+      {
+        "text": "Maintenance",
+        "icon": "ph-wrench",
+        "isLeadingPageIcon": false,
+        "subMenus": [{
+            "text": "Error 404",
+            "link": "/error-404"
+          },
+          {
+            "text": "Connection Lost",
+            "link": "/connection-lost"
+          },
+          {
+            "text": "Under Construction",
+            "link": "/under-construction"
+          },
+          {
+            "text": "Comming Soon",
+            "link": "/coming-soon"
+          }
+        ]
+      },
+      {
+        "text": "Contact Us",
+        "icon": "ph-target",
+        "link": "/contact-us",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Landing",
+        "icon": "ph-rocket",
+        "link": "/landing",
+        "isLeadingPageIcon": true,
+        "subMenus": []
+      },
+      {
+        "text": "Loading",
+        "link": "/loading",
+        "icon": "ph-fan",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Search",
+        "icon": "ph-magnifying-glass",
+        "isLeadingPageIcon": false,
+        "subMenus": [{
+            "text": "Search Page",
+            "link": "/search-page"
+          },
+          {
+            "text": "Contact Search",
+            "link": "/contact-search"
+          }
+        ]
+      },
+      {
+        "text": "Site Setting",
+        "icon": "ph-globe",
+        "isLeadingPageIcon": false,
+        "link": "/page-settings",
+        "subMenus": []
+      }
+    ]
+  }, 
+  {
+    "menuName": "Others",
+    "menuItems": [{
+        "text": "Menu levels",
+        "icon": "ph-tree-structure",
+        "isLeadingPageIcon": false,
+        "subMenus": [{
+            "text": "Lavel 2.1",
+            "link": "javascript: void(0);"
+          },
+          {
+            "text": "Lavel 2.2",
+            "innerSubMenu": [{
+                "text": "Lavel 3.1",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Lavel 3.2",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Lavel 3.3",
+                "link": "javascript: void(0);"
+              }
+            ]
+          },
+          {
+            "text": "Lavel 2.3",
+            "innerSubMenu": [{
+                "text": "Lavel 3.1",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Lavel 3.2",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Lavel 3.3",
+                "link": "javascript: void(0);"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Sample page",
+        "icon": "ph-desktop",
+        "isLeadingPageIcon": false,
+        "link": "/sample-page",
+        "subMenus": []
+      }
+    ]
+  }
+]

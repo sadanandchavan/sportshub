@@ -1,0 +1,1107 @@
+<!-- [ngClass]="{'pc-sidebar-hide': callpseSideBar}" -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        class="b-brand text-primary">
+        <img src="../assets/images/logo-dark.svg" alt="logo image" class="logo-lg" />
+        <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version">v1.0</span>
+      </a>
+    </div>
+    <div class="navbar-content pc-trigger">
+      <ul class="pc-navbar" style="display: block;">
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-gauge"></i></span><span class="pc-mtext">Navigation</span> <span
+              class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-gauge"></i>
+                </span>
+                <span class="pc-mtext">Dashboard</span>
+                <span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span>
+                <span class="pc-badge">2</span>
+              </a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Analytics</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/affiliate" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Affiliate</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/finance" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Finance</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/helpdesk" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Helpdesk</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Invoice</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link"><span class="pc-micon"> <i class="ph-duotone ph-layout"></i></span><span
+                  class="pc-mtext">Layouts</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item active"><a class="pc-link" routerLink="/layout-horizontal"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Horizontal</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/layout-vertical" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Vertical</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/layout-vertical-tab"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Vertical + Tab</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-chart-pie"></i></span><span class="pc-mtext">Widget</span> <span
+              class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item">
+              <a routerLink="/statistics" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-projector-screen-chart"></i>
+                </span>
+                <span class="pc-mtext">Statistics</span>
+              </a>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-identification-card"></i>
+                </span>
+                <span class="pc-mtext">User</span>
+              </a>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/data" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-database"></i>
+                </span>
+                <span class="pc-mtext">Data</span>
+              </a>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/chart" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-chart-pie"></i>
+                </span>
+                <span class="pc-mtext">Chart</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-buildings"></i></span><span class="pc-mtext">Application</span> <span
+              class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu edge-alt edge-alt-full" style="top: --7px; bottom: -302px">
+            <li class="pc-item">
+              <a routerLink="/calendar" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-calendar-blank"></i>
+                </span>
+                <span class="pc-mtext">Calendar</span></a>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/chat" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-chats-circle"></i>
+                </span>
+                <span class="pc-mtext">Chat</span></a>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-image"></i>
+                </span>
+                <span class="pc-mtext">Gallery</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/gallery-grid" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Grid</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-shopping-cart"></i>
+                </span>
+                <span class="pc-mtext">E-commerce</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/e-commerce-product" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Product</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/e-commerce-product-details"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Product
+                    details</a>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/e-commerce-product-list" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Product List</a>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/e-commerce-product-add" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Add New Product</a>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/e-commerce-product-checkout"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Checkout</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link"><span class="pc-micon"><i class="ph-duotone ph-lifebuoy"></i></span><span
+                  class="pc-mtext">Helpdesk</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/helpdesk" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="javascript: void(0);">Ticket<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/ticket-create" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Create</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/ticket-list" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">List</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/ticket-details" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/helpdesk-customer"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Customer</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-newspaper"></i>
+                </span>
+                <span class="pc-mtext">Invoice 1</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-one-list"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Invoice List</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-one-create"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Create</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-one-preview"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Preview</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link"><span class="pc-micon"><i class="ph-duotone ph-newspaper"></i></span><span
+                  class="pc-mtext">Invoice 2</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-two-create" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Create</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-two-view" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Details</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-two-list" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">List</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/invoice-two-edit" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Edit</a></li>
+              </ul>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/mail" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-envelope-open"></i>
+                </span>
+                <span class="pc-mtext">Mail</span></a>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-identification-badge"></i>
+                </span>
+                <span class="pc-mtext">Membership</span>
+                <span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span>
+              </a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/membership"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/membership-list"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">List</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/membership-pricing"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Pricing</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/membership-setting"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Setting</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-books"></i>
+                </span>
+                <span class="pc-mtext">Online Courses</span>
+                <span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span>
+              </a>
+              <ul class="pc-submenu edge-alt edge-alt-full"
+                style="top: -110.54727172851562px; bottom: -184.45272827148438px">
+                <li class="pc-item"><a class="pc-link" routerLink="/course"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="javascript: void(0);">Teacher<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/teacher-list"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">List</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/teacher-apply"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Apply</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/teacher-add"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Add</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="javascript: void(0);">Student<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/student-list"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">list</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/student-apply"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Apply</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/student-add"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Add</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="javascript: void(0);">Courses<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/course-view"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">View</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/course-add"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Add</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/online-course-pricing" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Pricing</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/online-course-site" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Site</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="javascript: void(0);">Setting<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/online-course-setting-payment"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Payment</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/online-course-setting-pricing"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Pricing</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/online-course-setting-notifaction"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Notifications</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/applications-plans" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-currency-circle-dollar"></i>
+                </span>
+                <span class="pc-mtext">Plans</span></a>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-user-circle"></i>
+                </span>
+                <span class="pc-mtext">Users</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu edge-alt">
+                <li class="pc-item"><a class="pc-link" routerLink="/applications-users-account-profile"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Account Profile</a>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/applications-users-social-media"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Social media</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/applications-users-card" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">User Card</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/applications-users-list" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">User List</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/applications-user-team" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Team</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-devices"></i></span><span class="pc-mtext">Pages</span> <span class="pc-arrow"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-shield-checkered"></i>
+                </span>
+                <span class="pc-mtext">Authentication</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item pc-hasmenu">
+                  <a href="javascript: void(0);" class="pc-link">Authentication 1<span class="pc-arrow"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/login-v1"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Login</a></li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/register-v1"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Register</a>
+                    </li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/forgot-password-v1"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Forgot
+                        Password</a></li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/reset-password-v1"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">reset
+                        password</a> </li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/code-verification-v1"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">code
+                        verification</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="javascript: void(0);" class="pc-link">Authentication 2<span class="pc-arrow"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/login-v2"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Login</a></li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/register-v2"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Register</a>
+                    </li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/forgot-password-v2"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Forgot
+                        password</a> </li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/reset-password-v2"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">reset
+                        password</a> </li>
+                    <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/code-verification-v2"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">code
+                        verification</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/login-modal" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Login Modal</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-wrench"></i>
+                </span>
+                <span class="pc-mtext">Maintenance</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span>
+              </a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/error-404"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Error 404</a></li>
+                <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/connection-lost"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Connection
+                    lost</a></li>
+                <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/under-construction"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Under
+                    Construction</a></li>
+                <li class="pc-item"><a class="pc-link" target="_blank" routerLink="/coming-soon"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Coming soon</a>
+                </li>
+              </ul>
+            </li>
+            <li class="pc-item"><a routerLink="/contact-us" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link"><span class="pc-micon"> <i
+                    class="ph-duotone ph-target"></i> </span><span class="pc-mtext">Contact Us</span></a>
+            </li>
+            <li class="pc-item"><a routerLink="/landing" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link" target="_blank"><span class="pc-micon"> <i
+                    class="ph-duotone ph-rocket"></i> </span>
+                <span class="pc-mtext pc-icon-link">Landing <i class="ti ti-link text-primary f-14"></i></span>
+              </a>
+            </li>
+            <li class="pc-item"><a routerLink="/loading" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link"><span class="pc-micon"> <i
+                    class="ph-duotone ph-fan"></i> </span><span class="pc-mtext">Loading</span></a>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-magnifying-glass"></i>
+                </span>
+                <span class="pc-mtext">Search</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/search-page" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Search Page</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/contact-search" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Contact Search</a></li>
+              </ul>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/settings" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-globe"></i>
+                </span>
+                <span class="pc-mtext">Site Settings</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-compass-tool"></i></span><span class="pc-mtext">UI Components</span> <span
+              class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item">
+              <a routerLink="/bc-alert" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link" target="_blank"><span class="pc-micon"> <i
+                    class="ph-duotone ph-compass-tool"></i></span>
+                <span class="pc-mtext pc-icon-link">Components <i class="ti ti-link text-primary f-14"></i></span>
+              </a>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/animation" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon"> <i class="ph-duotone ph-flower"></i> </span><span
+                  class="pc-mtext">Animation</span></a>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link"><span class="pc-micon"> <i
+                    class="ph-duotone ph-flower-lotus"></i></span><span class="pc-mtext">Icons</span><span
+                  class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/feather" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Feather</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/fontawesome"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Font Awesome 5</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/material"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Material</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tabler" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Tabler</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/phosphor"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Phosphor</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/custom" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Custom</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-textbox"></i></span><span class="pc-mtext">Forms</span> <span class="pc-arrow"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-textbox"></i>
+                </span>
+                <span class="pc-mtext">Forms Elements</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/form-elements" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Form Basic</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-floating" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Form Floating</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-basic" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Form Options</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-input-group"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Input Groups</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-checkbox" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Checkbox</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-radio" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Radio</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-switch" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Switch</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-megaoption"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Mega option</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-plug-charging"></i>
+                </span>
+                <span class="pc-mtext">Forms Plugins</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="#">Date<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/form-datepicker"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Datepicker</a></li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/form-daterangepicker"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Date Range
+                        Picker</a> </li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/form-timepicker"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Timepicker</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="#">Select<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/form-choices"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Choices js</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-rating" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Rating</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-recaptcha" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Google reCaptcha</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-inputmask" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Input Masks</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-clipboard" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Clipboard</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-nouislider"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Nouislider</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-switchjs" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Bootstrap Switch</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-typeahead" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Typeahead</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-pen-nib"></i>
+                </span>
+                <span class="pc-mtext">Text Editors</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/form-tinymce" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Tinymce</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-quill" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Quill</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a class="pc-link" href="#">CK editor<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/editor-classic"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">classic</a></li>
+                  </ul>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-markdown" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Markdown</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-windows-logo"></i>
+                </span>
+                <span class="pc-mtext">Form Layouts</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/form-lay-default"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Layouts</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-lay-multicolumn"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Multicolumn</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-lay-actionbars"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Actionbars</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-lay-stickyactionbars"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Sticky Action
+                    bars</a> </li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-cloud-arrow-up"></i>
+                </span>
+                <span class="pc-mtext">File upload</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/file-upload" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Dropzone</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/form-flu-uppy" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Uppy</a></li>
+              </ul>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/form-wizard" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-tabs"></i>
+                </span>
+                <span class="pc-mtext">wizard</span></a>
+            </li>
+            <li class="pc-item">
+              <a routerLink="/form-validation" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-password"></i>
+                </span>
+                <span class="pc-mtext">Form Validation</span></a>
+            </li>
+            <li class="pc-item"><a routerLink="/image-crop" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-crop"></i>
+                </span>
+                <span class="pc-mtext">Image cropper</span></a></li>
+          </ul>
+        </li>
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-table"></i></span><span class="pc-mtext">table</span> <span class="pc-arrow"><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-table"></i>
+                </span>
+                <span class="pc-mtext">Bootstrap Table</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/basic-table" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Basic table</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/sizing-table" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Sizing table</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/border-table" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Border table</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/styling-table" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Styling table</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-grid-nine"></i>
+                </span>
+                <span class="pc-mtext">Vanilla Table</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-simple" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Basic initialization</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-dynamic-import"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dynamic Import</a>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-render-column-cells"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Render Column
+                    Cells</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-column-manipulation"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Column
+                    Manipulation</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-datetime-sorting"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Datetime Sorting</a>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-methods" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Methods</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-add-rows" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Add Rows</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-fetch-api"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Fetch API</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-filters" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Filters</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/tbl-dt-export" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Export</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-text-columns"></i>
+                </span>
+                <span class="pc-mtext">Data table</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-advance" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Advance initialization</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-styling" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Styling</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-api" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">API</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-plugin" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Plug-in</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-sources" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Data sources</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-wall"></i>
+                </span>
+                <span class="pc-mtext">DT extensions</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-autofill" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Autofill</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="javascript: void(0);" class="pc-link">Button<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-basic-buttons"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Basic button</a>
+                    </li>
+                    <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-export-buttons"
+                        routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Data export</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-col-reorder"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Col reorder</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-fixed-columns"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Fixed columns</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-fixed-header"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Fixed header</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-key-table"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Key table</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-responsive"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Responsive</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-row-reorder"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Row reorder</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-scroller" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Scroller</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/dt-ext-select" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Select table</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "><span class="pc-micon"><i
+                class="ph-duotone ph-chart-pie-slice"></i></span><span class="pc-mtext">Charts &amp; Maps</span> <span
+              class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-chart-donut"></i>
+                </span>
+                <span class="pc-mtext">Charts</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/chart-apex" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Apex Chart</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/chart-peity" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Peity Chart</a></li>
+              </ul>
+            </li>
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-map-trifold"></i>
+                </span>
+                <span class="pc-mtext">Maps</span><span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" routerLink="/map-vector" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Vector Map</a></li>
+                <li class="pc-item"><a class="pc-link" routerLink="/map-gmap" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">Gmaps</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li class="pc-item pc-hasmenu"> <a href="javascript: void(0);" class="pc-link "> <span class="pc-micon"><i
+                class="ph-duotone ph-suitcase"></i></span> <span class="pc-mtext">Other</span> <span
+              class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg></span> </a>
+          <ul class="pc-submenu">
+            <li class="pc-item pc-hasmenu">
+              <a href="javascript: void(0);" class="pc-link"><span class="pc-micon"> <i class="ph-duotone ph-tree-structure"></i>
+                </span><span class="pc-mtext">Menu levels</span><span class="pc-arrow"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-chevron-right">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg></span></a>
+              <ul class="pc-submenu">
+                <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 2.1</a></li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="javascript: void(0);" class="pc-link">Level 2.2<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 3.1</a></li>
+                    <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 3.2</a></li>
+                    <li class="pc-item pc-hasmenu">
+                      <a href="javascript: void(0);" class="pc-link">Level 3.3<span class="pc-arrow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg></span></a>
+                      <ul class="pc-submenu">
+                        <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 4.1</a></li>
+                        <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 4.2</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pc-item pc-hasmenu">
+                  <a href="javascript: void(0);" class="pc-link">Level 2.3<span class="pc-arrow"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg></span></a>
+                  <ul class="pc-submenu">
+                    <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 3.1</a></li>
+                    <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 3.2</a></li>
+                    <li class="pc-item pc-hasmenu">
+                      <a href="javascript: void(0);" class="pc-link">Level 3.3<span class="pc-arrow"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg></span></a>
+                      <ul class="pc-submenu">
+                        <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 4.1</a></li>
+                        <li class="pc-item"><a class="pc-link" href="javascript: void(0);">Level 4.2</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="pc-item"><a routerLink="other/sample-page" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" class="pc-link">
+                <span class="pc-micon">
+                  <i class="ph-duotone ph-desktop"></i>
+                </span>
+                <span class="pc-mtext">Sample page</span></a></li>
+          </ul>
+        </li>
+
+
+
+      </ul>
+      <div class="card nav-action-card bg-brand-color-4">
+        <div class="card-body" style="background-image: url('../assets/images/layout/nav-card-bg.svg')">
+          <h5 class="text-dark">Help Center</h5>
+          <p class="text-dark text-opacity-75">Please contact us for more questions.</p>
+          <a href="https://phoenixcoded.support-hub.io/" class="btn btn-primary" target="_blank">Go to help Center</a>
+        </div>
+      </div>
+    </div>
+    <div class="card pc-user-card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <div class="dropdown">
+              <a href="#" class="arrow-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                data-bs-offset="0,20">
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1 me-2">
+                    <h6 class="mb-0">Jonh Smith</h6>
+                    <small>Administrator</small>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <div class="btn btn-icon btn-link-secondary avtar">
+                      <i class="ph-duotone ph-windows-logo"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-user"></i>
+                      <span>My Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-gear"></i>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-lock-key"></i>
+                      <span>Lock Screen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-power"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<app-navbar></app-navbar>
+
+<router-outlet name="hori"></router-outlet>
+
+<app-footer></app-footer>

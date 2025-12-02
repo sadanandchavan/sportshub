@@ -1,0 +1,74 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h3 class="calendar-modal-title f-w-600 text-truncate">{{ event.title }}</h3>
+    <span class="avtar avtar-s btn-link-danger btn-pc-default" (click)="closeModal()">
+      <i class="ti ti-x f-20"></i>
+    </span>
+  </div>
+  <div class="modal-body">
+    <div class="d-flex" *ngIf="event?.title">
+      <div class="flex-shrink-0">
+        <div class="avtar avtar-xs bg-light-secondary">
+          <i class="ti ti-heading f-20"></i>
+        </div>
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <h5 class="mb-1"><b>Title</b></h5>
+        <p class="pc-event-title text-muted">{{ event.title }}</p>
+      </div>
+    </div>
+    <div class="d-flex" *ngIf="event.venue">
+      <div class="flex-shrink-0">
+        <div class="avtar avtar-xs bg-light-warning">
+          <i class="ti ti-map-pin f-20"></i>
+        </div>
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <h5 class="mb-1"><b>Venue</b></h5>
+        <p class="pc-event-venue text-muted">{{ event.venue }}</p>
+      </div>
+    </div>
+    <div class="d-flex" *ngIf="event?.start">
+      <div class="flex-shrink-0">
+        <div class="avtar avtar-xs bg-light-danger">
+          <i class="ti ti-calendar-event f-20"></i>
+        </div>
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <h5 class="mb-1"><b>Date</b></h5>
+        <p class="pc-event-date text-muted">{{ event.start }} <span *ngIf="event.end"><i class="text-sm">to</i>
+            {{ event.end }}</span> </p>
+      </div>
+    </div>
+    <div class="d-flex" *ngIf="event?.description">
+      <div class="flex-shrink-0">
+        <div class="avtar avtar-xs bg-light-primary">
+          <i class="ti ti-file-text f-20"></i>
+        </div>
+      </div>
+      <div class="flex-grow-1 ms-3">
+        <h5 class="mb-1"><b>Description</b></h5>
+        <p class="pc-event-description text-muted">{{ event.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer justify-content-between">
+    <ul class="list-inline me-auto mb-0">
+      <li class="list-inline-item align-bottom" (click)="confirmDeleteEvent()">
+        <span id="pc_event_remove" class="avtar avtar-s btn-link-danger btn-pc-default w-sm-auto" placement="top"
+          ngbTooltip="Delete">
+          <i class="ti ti-trash f-18"></i>
+        </span>
+      </li>
+      <li class="list-inline-item align-bottom" (click)="editEvent()">
+        <span id="pc_event_edit" class="avtar avtar-s btn-link-success btn-pc-default" placement="top"
+          ngbTooltip="Edit">
+          <i class="ti ti-edit-circle f-18"></i>
+        </span>
+      </li>
+    </ul>
+    <div class="flex-grow-1 text-end">
+      <button type="button" class="btn btn-primary" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,420 @@
+<div class="card">
+  <div class="card-body user-story-block">
+    <div class="card user-story add-story">
+      <img src="../assets/images/application/img-story-1.jpg" class="card-img" alt="img" />
+      <div class="card-img-overlay">
+        <div class="btn-plus">
+          <i class="ti ti-plus"></i>
+        </div>
+        <h6 class="text-white mb-0">Add Story</h6>
+      </div>
+    </div>
+    <div class="horizontal-scroll">
+      <ng-container *ngFor="let item of albums[0]; let i = index">
+        <a class="card user-story" (click)="open(0, i)">
+          <img [src]="item.src" class="card-img" alt="img" />
+          <div class="card-img-overlay">
+            <img [src]="item.avatar" class="wid-30 rounded-circle img-user" alt="img" />
+          </div>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <textarea class="form-control border-0 shadow-none" placeholder="What’s new, Stebin?" rows="1"></textarea>
+    <div class="row align-items-center mt-3">
+      <div class="col">
+        <ul class="list-inline ms-auto mb-0">
+          <li class="list-inline-item border-end pe-2 me-2">
+            <a href="#" class="avtar avtar-s btn-link-warning">
+              <i class="ti ti-mood-smile f-18"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="avtar avtar-s btn-link-secondary">
+              <i class="ti ti-photo f-18"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="avtar avtar-s btn-link-secondary">
+              <i class="ti ti-paperclip f-18"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-auto text-end">
+        <button class="btn btn-primary">Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex align-items-center mb-3">
+      <div class="flex-shrink-0">
+        <div class="chat-avtar">
+          <img class="rounded-circle img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+          <div class="bg-success chat-badge"></div>
+        </div>
+      </div>
+      <div class="flex-grow-1 mx-2">
+        <h5 class="mb-0">John Doe</h5>
+        <span class="text-sm text-muted">Technical Department</span>
+      </div>
+      <div class="flex-shrink-0">
+        <div class="dropdown">
+          <a class="avtar avtar-xs btn-link-secondary dropdown-toggle arrow-none" href="#" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><i class="material-icons-two-tone f-18">more_vert</i></a>
+          <div class="dropdown-menu dropdown-menu-end">
+            <a class="dropdown-item" href="#">Edit</a>
+            <a class="dropdown-item" href="#">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+      industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.</p>
+    <div class="row g-2">
+      <div class="col-md-6">
+        <!-- First Image (takes the full width) -->
+        <ng-container *ngIf="albums[1].length > 0">
+          <a class="img-post card mb-2" (click)="open(1, 0)">
+            <img [src]="albums[1][0].src" [alt]="'img'" class="card-img" />
+            <div class="card-img-overlay">
+              <i class="ti ti-search"></i>
+            </div>
+          </a>
+        </ng-container>
+
+        <!-- Remaining Images in the first column -->
+        <div class="row g-2">
+          <div class="col-md-6" *ngFor="let image of albums[1].slice(1, 3); let i = index">
+            <a class="img-post card" (click)="open(1, i + 1)">
+              <img [src]="image.src" [alt]="'img'" class="card-img" />
+              <div class="card-img-overlay">
+                <i class="ti ti-search"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!-- Images for the second column -->
+        <div class="row g-2 mb-2">
+          <div class="col-md-6" *ngFor="let image of albums[1].slice(3, 5); let i = index">
+            <a class="img-post card" (click)="open(1, i + 3)">
+              <img [src]="image.src" [alt]="'img'" class="card-img" />
+              <div class="card-img-overlay">
+                <i class="ti ti-search"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Last Image in the second column -->
+        <ng-container *ngIf="albums[1].length > 5">
+          <a class="img-post card" (click)="open(1, 5)">
+            <img [src]="albums[1][5].src" [alt]="'img'" class="card-img" />
+            <div class="card-img-overlay">
+              <i class="ti ti-search"></i>
+            </div>
+          </a>
+        </ng-container>
+      </div>
+    </div>
+
+
+    <div class="row my-3">
+      <div class="col">
+        <a href="#" class="btn btn-link-dark m-1">
+          <i class="ph-duotone ph-thumbs-up me-1"></i> 450K <small class="text-muted">Likes</small></a>
+        <a href="#" class="btn btn-link-secondary m-1">
+          <i class="ph-duotone ph-chat-teardrop-dots me-1"></i>500 <small class="text-muted">Comments</small></a>
+        <a href="#" class="btn btn-link-secondary m-1">
+          <i class="ph-duotone ph-share-network me-1"></i>100 <small class="text-muted">Share</small></a>
+        <a href="#" class="btn btn-link-secondary m-1">
+          <i class="ph-duotone ph-book-bookmark me-1"></i>20 <small class="text-muted">Saved</small></a>
+      </div>
+      <div class="col-auto text-end">
+        <div class="d-flex align-items-center">
+          <p class="mb-0 me-2">30 Comments</p>
+          <div class="user-group post-user-group">
+            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+            <span class="avtar bg-danger text-white"><span class="f-12">K</span></span>
+            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+            <span class="avtar bg-success text-white">
+              <svg class="pc-icon m-0">
+                <path opacity="0.4"
+                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                  fill="currentcolor" />
+                <path
+                  d="M12.0002 14.5C6.99015 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5901C20.8701 22.5 21.0901 22.28 21.0901 22C21.0901 17.86 17.0102 14.5 12.0002 14.5Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+            <span class="avtar bg-light-primary text-primary"><span class="f-12">+2</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-block">
+      <div class="comment">
+        <div class="d-flex align-items-start">
+          <div class="chat-avtar flex-shrink-0">
+            <img class="rounded-circle img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+            <div class="bg-success chat-badge"></div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-0">John Doe</h5>
+            <span class="text-sm text-muted">2 hour ago</span>
+          </div>
+        </div>
+        <div class="comment-content">
+          <p class="mb-2 mt-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+          <a href="#" class="link-primary mb-1">https://phoenixcoded.net/</a>
+        </div>
+      </div>
+      <div class="comment-content">
+        <div class="mb-4">
+          <a href="#" class="btn btn-link-dark"> <i class="ph-duotone ph-heart me-1 text-danger"></i> 450</a>
+          <a href="#" class="btn btn-link-secondary"> <i class="ph-duotone ph-share-network me-1"></i>100</a>
+        </div>
+      </div>
+      <div class="comment sub-comment">
+        <div class="d-flex align-items-start">
+          <div class="chat-avtar flex-shrink-0">
+            <img class="rounded-circle img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+            <div class="bg-success chat-badge"></div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-0">John Doe</h5>
+            <span class="text-sm text-muted">2 hour ago</span>
+          </div>
+        </div>
+        <div class="comment-content">
+          <div class="card mt-3 mb-0">
+            <div class="card-body">
+              <h6>Lorem Ipsum is simply dummy</h6>
+              <p class="mb-2">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+              <a href="#" class="link-primary mb-1">https://phoenixcoded.net/</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comment-content">
+        <div class="mb-4">
+          <a href="#" class="btn btn-link-dark"> <i class="ph-duotone ph-heart me-1 text-danger"></i> 450</a>
+          <a href="#" class="btn btn-link-secondary"> <i class="ph-duotone ph-share-network me-1"></i>100</a>
+        </div>
+      </div>
+      <div class="comment">
+        <div class="d-flex align-items-start">
+          <div class="chat-avtar flex-shrink-0">
+            <img class="rounded-circle img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+            <div class="bg-success chat-badge"></div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-0">John Doe</h5>
+            <span class="text-sm text-muted">2 hour ago</span>
+          </div>
+        </div>
+        <div class="comment-content">
+          <p class="mb-2 mt-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+          <a href="#" class="link-primary mb-1">https://phoenixcoded.net/</a>
+        </div>
+      </div>
+      <div class="comment-content">
+        <div class="mb-4">
+          <a href="#" class="btn btn-link-dark"> <i class="ph-duotone ph-heart me-1 text-danger"></i> 450</a>
+          <a href="#" class="btn btn-link-secondary"> <i class="ph-duotone ph-share-network me-1"></i>100</a>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center mt-3">
+      <div class="flex-shrink-0">
+        <img class="img-radius d-none d-sm-inline-flex me-3 wid-40 rounded-circle"
+          src="../assets/images/user/avatar-1.jpg" alt="User image" />
+      </div>
+      <div class="flex-grow-1 me-3">
+        <div class="input-comment">
+          <input type="email" class="form-control" placeholder="Type a something..." />
+          <ul class="list-inline start-0 mb-0">
+            <li class="list-inline-item border-end pe-2 me-2">
+              <a href="#" class="avtar avtar-xs btn-link-warning">
+                <i class="ti ti-mood-smile f-18"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="list-inline end-0 mb-0">
+            <li class="list-inline-item">
+              <a href="#" class="avtar avtar-xs btn-link-secondary">
+                <i class="ti ti-photo f-18"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="avtar avtar-xs btn-link-secondary">
+                <i class="ti ti-paperclip f-18"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-shrink-0">
+        <a href="#" class="avtar avtar-s btn btn-primary">
+          <i class="ti ti-send f-18"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex align-items-center mb-3">
+      <div class="flex-shrink-0">
+        <div class="chat-avtar">
+          <img class="rounded-circle img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+          <div class="bg-success chat-badge"></div>
+        </div>
+      </div>
+      <div class="flex-grow-1 mx-2">
+        <h5 class="mb-0">John Doe</h5>
+        <span class="text-sm text-muted">Technical Department</span>
+      </div>
+      <div class="flex-shrink-0">
+        <div class="dropdown">
+          <a class="avtar avtar-xs btn-link-secondary dropdown-toggle arrow-none" href="#" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><i class="material-icons-two-tone f-18">more_vert</i></a>
+          <div class="dropdown-menu dropdown-menu-end">
+            <a class="dropdown-item" href="#">Edit</a>
+            <a class="dropdown-item" href="#">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="mb-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+      industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.</p>
+    <div class="row g-2">
+      <div class="col-12">
+        <div class="ratio ratio-21x9 rounded overflow-hidden">
+          <iframe src="https://www.youtube.com/embed/7lsRnCJpFp4" title="YouTube video" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col">
+        <a href="#" class="btn btn-link-dark m-1">
+          <i class="ph-duotone ph-thumbs-up me-1"></i> 450K <small class="text-muted">Likes</small></a>
+        <a href="#" class="btn btn-link-secondary m-1">
+          <i class="ph-duotone ph-chat-teardrop-dots me-1"></i>500 <small class="text-muted">Comments</small></a>
+        <a href="#" class="btn btn-link-secondary m-1">
+          <i class="ph-duotone ph-share-network me-1"></i>100 <small class="text-muted">Share</small></a>
+        <a href="#" class="btn btn-link-secondary m-1">
+          <i class="ph-duotone ph-book-bookmark me-1"></i>20 <small class="text-muted">Saved</small></a>
+      </div>
+      <div class="col-auto text-end">
+        <div class="d-flex align-items-center">
+          <p class="mb-0 me-2">30 Comments</p>
+          <div class="user-group post-user-group">
+            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="avtar" />
+            <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="avtar" />
+            <span class="avtar bg-danger text-white"><span class="f-12">K</span></span>
+            <img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="avtar" />
+            <span class="avtar bg-success text-white">
+              <svg class="pc-icon m-0">
+                <path opacity="0.4"
+                  d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                  fill="currentcolor" />
+                <path
+                  d="M12.0002 14.5C6.99015 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5901C20.8701 22.5 21.0901 22.28 21.0901 22C21.0901 17.86 17.0102 14.5 12.0002 14.5Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <img src="../assets/images/user/avatar-4.jpg" alt="user-image" class="avtar" />
+            <span class="avtar bg-light-primary text-primary"><span class="f-12">+2</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-block">
+      <div class="comment">
+        <div class="d-flex align-items-start">
+          <div class="chat-avtar flex-shrink-0">
+            <img class="rounded-circle img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image" />
+            <div class="bg-success chat-badge"></div>
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mb-0">John Doe</h5>
+            <span class="text-sm text-muted">2 hour ago</span>
+          </div>
+        </div>
+        <div class="comment-content">
+          <p class="mb-2 mt-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</p>
+          <a href="#" class="link-primary mb-1">https://phoenixcoded.net/</a>
+        </div>
+      </div>
+      <div class="comment-content">
+        <div class="mb-4">
+          <a href="#" class="btn btn-link-dark"> <i class="ph-duotone ph-heart me-1 text-danger"></i> 450</a>
+          <a href="#" class="btn btn-link-secondary"> <i class="ph-duotone ph-share-network me-1"></i>100</a>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center mt-3">
+      <div class="flex-shrink-0">
+        <img class="img-radius d-none d-sm-inline-flex me-3 wid-40 rounded-circle"
+          src="../assets/images/user/avatar-1.jpg" alt="User image" />
+      </div>
+      <div class="flex-grow-1 me-3">
+        <div class="input-comment">
+          <input type="email" class="form-control" placeholder="Type a something..." />
+          <ul class="list-inline start-0 mb-0">
+            <li class="list-inline-item border-end pe-2 me-2">
+              <a href="#" class="avtar avtar-xs btn-link-warning">
+                <i class="ti ti-mood-smile f-18"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="list-inline end-0 mb-0">
+            <li class="list-inline-item">
+              <a href="#" class="avtar avtar-xs btn-link-secondary">
+                <i class="ti ti-photo f-18"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="avtar avtar-xs btn-link-secondary">
+                <i class="ti ti-paperclip f-18"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="avtar avtar-s btn btn-primary">
+        <i class="ti ti-send f-18"></i>
+      </a>
+    </div>
+  </div>
+</div>

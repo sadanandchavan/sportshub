@@ -1,0 +1,144 @@
+<div class="card">
+    <div class="card-header">
+        <h5>Gallery</h5>
+    </div>
+    <div class="card-body">
+        <div class="card">
+            <div class="card-header">
+                <h5>Gallery</h5>
+            </div>
+            <div class="card-body">
+                <div class="row g-2">
+                    <!-- First row of images -->
+                    <div class="col-md-6" *ngIf="gallery.length > 0">
+                        <a class="img-post card social-gallery-card" (click)="open(0)">
+                            <img [src]="gallery[0].src" alt="img" class="card-img" />
+                            <div class="card-img-overlay">
+                                <i class="ti ti-cloud-download"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row g-2">
+                            <div class="col-md-12" *ngIf="gallery.length > 1">
+                                <a class="img-post card social-gallery-card" (click)="open(1)">
+                                    <img [src]="gallery[1].src" alt="img" class="card-img" />
+                                    <div class="card-img-overlay">
+                                        <i class="ti ti-cloud-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-12" *ngIf="gallery.length > 2">
+                                <a class="img-post card social-gallery-card" (click)="open(2)">
+                                    <img [src]="gallery[2].src" alt="img" class="card-img" />
+                                    <div class="card-img-overlay">
+                                        <i class="ti ti-cloud-download"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Remaining images -->
+                    <div class="col-md-4" *ngFor="let image of gallery.slice(3, 6); let i = index">
+                        <a class="img-post card social-gallery-card" (click)="open(i + 3)">
+                            <img [src]="image.src" alt="img" class="card-img" />
+                            <div class="card-img-overlay">
+                                <i class="ti ti-cloud-download"></i>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <!-- Last row of images -->
+                    <div class="col-md-6" *ngIf="gallery.length > 6">
+                        <a class="img-post card social-gallery-card" (click)="open(6)">
+                            <img [src]="gallery[6].src" alt="img" class="card-img" />
+                            <div class="card-img-overlay">
+                                <i class="ti ti-cloud-download"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6" *ngIf="gallery.length > 7">
+                        <a class="img-post card social-gallery-card" (click)="open(7)">
+                            <img [src]="gallery[7].src" alt="img" class="card-img" />
+                            <div class="card-img-overlay">
+                                <i class="ti ti-cloud-download"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row g-2">
+            <div class="col-md-6">
+                <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-1.jpg">
+                    <img src="../assets/images/application/img-gallery-1.jpg" alt="img" class="card-img" />
+                    <div class="card-img-overlay">
+                        <i class="ti ti-cloud-download"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-2">
+                    <div class="col-md-12">
+                        <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-2.jpg">
+                            <img src="../assets/images/application/img-gallery-2.jpg" alt="img" class="card-img" />
+                            <div class="card-img-overlay">
+                                <i class="ti ti-cloud-download"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-3.jpg">
+                            <img src="../assets/images/application/img-gallery-3.jpg" alt="img" class="card-img" />
+                            <div class="card-img-overlay">
+                                <i class="ti ti-cloud-download"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-5.jpg">
+                    <img src="../assets/images/application/img-gallery-5.jpg" alt="img" class="card-img" />
+                    <div class="card-img-overlay">
+                        <i class="ti ti-cloud-download"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-6.jpg">
+                    <img src="../assets/images/application/img-gallery-6.jpg" alt="img" class="card-img" />
+                    <div class="card-img-overlay">
+                        <i class="ti ti-cloud-download"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-4.jpg">
+                    <img src="../assets/images/application/img-gallery-4.jpg" alt="img" class="card-img" />
+                    <div class="card-img-overlay">
+                        <i class="ti ti-cloud-download"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-8.jpg">
+                    <img src="../assets/images/application/img-gallery-8.jpg" alt="img" class="card-img" />
+                    <div class="card-img-overlay">
+                        <i class="ti ti-cloud-download"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a class="img-post card social-gallery-card" data-lightbox="../assets/images/application/img-gallery-7.jpg">
+                    <img src="../assets/images/application/img-gallery-7.jpg" alt="img" class="card-img" />
+                    <div class="card-img-overlay">
+                        <i class="ti ti-cloud-download"></i>
+                    </div>
+                </a>
+            </div>
+        </div> -->
+    </div>
+</div>

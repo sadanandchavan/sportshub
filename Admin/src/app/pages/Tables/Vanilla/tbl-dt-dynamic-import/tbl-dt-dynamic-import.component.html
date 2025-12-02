@@ -1,0 +1,49 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Dynamic Import'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ Dynamic Import ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Dynamic Import</h5>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-dynamic-import">
+            <thead>
+              <tr>
+                <th *ngFor="let header of getObjectKeys(tableData[0])">
+                  <a href="#" (click)="onSort(header)">
+                    {{ header }}
+                    <span *ngIf="sortField === header">
+                      {{ sortDirection === 'asc' ? '▲' : '▼' }}
+                    </span>
+                  </a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of (filteredPeople | paginate: { itemsPerPage: itemsPerPage, currentPage: p })">
+                <td *ngFor="let key of getObjectKeys(row)">{{ row[key] }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- [ Dynamic Import ] end -->
+</div>

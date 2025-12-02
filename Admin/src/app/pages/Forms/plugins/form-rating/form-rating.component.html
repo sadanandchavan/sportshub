@@ -1,0 +1,24 @@
+<app-breadcrumb [Title]="'Forms'" [pageTitle]="'Rating'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- [ sample-page ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Rating</h5>
+      </div>
+      <div class="card-body">
+        <div class="rating-container" #tooltip="ngbTooltip" [ngbTooltip]="tooltipTextData" placement="right">
+          <ngb-rating [(rate)]="rating" (rateChange)="onRateChange($event)">
+            <ng-template let-fill="fill" let-index="index">
+              <i class="bi bi-star{{ fill === 100 ? '-fill' : '' }}" [class.filled]="fill === 100"></i>
+            </ng-template>
+          </ngb-rating>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- [ sample-page ] end -->
+</div>

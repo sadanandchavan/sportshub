@@ -1,0 +1,58 @@
+<app-breadcrumb [Title]="'Helpdesk'" [pageTitle]="'Create Ticket'"></app-breadcrumb>
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label class="form-label">Customer</label>
+                <select class="mb-3 form-select">
+                  <option>Default select</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label class="form-label">Category</label>
+                <select class="mb-3 form-select">
+                  <option>Default select</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="exampleInputPassword1">Subject</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Subject" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="exampleInputPassword1">Description</label>
+            <div id="tinymce-editor" style="height: 150px">
+              <p>hello..</p>
+            </div>
+          </div>
+          <ngx-dropzone (change)="onSelect($event)" class="dropzone dz-clickable">
+            <ngx-dropzone-label>
+              Drag and drop files here or click to upload.
+            </ngx-dropzone-label>
+
+            <!-- Preview selected files -->
+            <ngx-dropzone-preview *ngFor="let file of files" [removable]="true" (removed)="onRemove(file)">
+              <!-- Check if the file is an image -->
+              <img *ngIf="file.type.startsWith('image/')" [src]="file.preview" alt="{{ file.name }}"
+                class="img-preview" />
+              <ngx-dropzone-label>{{ file.name }}</ngx-dropzone-label>
+            </ngx-dropzone-preview>
+          </ngx-dropzone>
+          <div class="text-end mt-4">
+            <button type="submit" class="btn btn-outline-secondary">Clear</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

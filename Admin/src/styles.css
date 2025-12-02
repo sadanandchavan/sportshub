@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+/* .pc-sidebar .navbar-content {
+    overflow: auto;
+} */
+
+.model-sidebar {
+  background-color: #fff;
+  margin-top: -6px;
+}
+[data-pc-theme=dark] .model-sidebar {
+  background-color: #19212a;
+}
+
+ngx-simplebar {
+  /* width: 200px; */
+  height: calc(100vh - 149px);
+}
+.basic-list {
+  list-style: none;
+}
+.basic-list li {
+  margin: 4px 10px;
+}
+.basic-list a {
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 12px 24px !important;
+}
+.basic-list a:hover {
+  background-color: #39465f1a;
+}
+.component {
+  padding: 12px 24px !important;
+  border: none !important;
+}
+
+.footer-link li {
+  padding: 8px 0;
+}
+.footer-link a {
+  /* color: #3e4853; */
+
+}
+.footer-link a:hover {
+  color: #04a9f5;
+}
+
+.icon-iframe{
+  height: 100%;
+  width: 100%;
+}
+
+.icon-card{
+  height: 100vh;
+}
+
+@media (max-width: 1199.98px) {
+  .component-page .component-offcanvas {
+      width: 300px;
+  }
+}
+
+/* sidebar layouts */
+@media (min-width: 1025px) {
+  .layout-wrapper.pc-header {
+    left: 0;
+  }
+  .layout-wrapper.pc-footer,
+  .layout-wrapper.pc-container {
+    margin-left: 0px;
+  }
+}

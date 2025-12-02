@@ -1,0 +1,11 @@
+.off-canvas-simplaebar{
+    height: calc(100vh - 85px);
+}
+
+.notifaction-simplaebar{
+    max-height: calc(100vh - 235px);
+}
+
+.notifaction-profile{
+    max-height: calc(100vh - 225px)
+}

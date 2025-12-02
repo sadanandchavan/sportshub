@@ -1,0 +1,48 @@
+<app-breadcrumb [Title]="'Online Courses'" [pageTitle]="'Notifications'"></app-breadcrumb>
+
+<!-- [ Main Content ] start -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Notifications</h5>
+            </div>
+            <div class="card-body">
+                <h6>Enrollment Notifications</h6>
+                <p class="text-muted">Get notified via email whenever a student enrolls in your school and/or courses.</p>
+                <div class="card shadow-none border">
+                    <div class="card-body p-3">
+                        <div class="form-check form-switch form-check-reverse text-start mb-2" *ngFor="let notif of enrollmentNotifications">
+                            <input class="form-check-input" type="checkbox" [id]="notif.id" [(ngModel)]="notif.checked" />
+                            <label class="form-check-label" [for]="notif.id">{{ notif.label }}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h6 class="mt-3 mt-md-5">Comment Notifications</h6>
+                <p class="text-muted">Get alerted via email whenever someone engages in a commenting action.</p>
+                <div class="card shadow-none border">
+                    <div class="card-body p-3">
+                        <div class="form-check form-switch form-check-reverse text-start mb-2" *ngFor="let notif of commentNotifications">
+                            <input class="form-check-input" type="checkbox" [id]="notif.id" [(ngModel)]="notif.checked" />
+                            <label class="form-check-label" [for]="notif.id">{{ notif.label }}</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h6 class="mt-3 mt-md-5">Subscription Notifications</h6>
+                <p class="text-muted">Get email notifications for specific subscription events.</p>
+                <div class="card shadow-none border">
+                    <div class="card-body p-3">
+                        <div class="form-check form-switch form-check-reverse text-start mb-2" *ngFor="let notif of subscriptionNotifications">
+                            <input class="form-check-input" type="checkbox" [id]="notif.id" [(ngModel)]="notif.checked" />
+                            <label class="form-check-label" [for]="notif.id">{{ notif.label }}</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+

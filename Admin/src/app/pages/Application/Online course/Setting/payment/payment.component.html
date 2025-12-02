@@ -1,0 +1,19 @@
+<app-breadcrumb [Title]="'Online Courses'" [pageTitle]="'Setting Payment'"></app-breadcrumb>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Payment</h5>
+            </div>
+            <div class="card-body">
+                <div [ngSwitch]="currentStep">
+                    <app-auth-section-one *ngSwitchCase="'step1'" (next)="nextStep()"></app-auth-section-one>
+                    <app-auth-section-two *ngSwitchCase="'step2'" (previous)="previousStep()" (next)="nextStep()"></app-auth-section-two>
+                    <app-auth-section-three *ngSwitchCase="'step3'" (previous)="previousStep()" (next)="nextStep()"></app-auth-section-three>
+                    <app-auth-section-four *ngSwitchCase="'step4'" (previous)="previousStep()"></app-auth-section-four>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

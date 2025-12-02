@@ -1,0 +1,42 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Filters'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Filters</h5>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2"
+          (ngModelChange)="filterData()" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="card-body table-border-style">
+        <div class="table-responsive" id="pc-dt-filter">
+          <table class="table">
+            <thead>
+              <tr>
+                <th *ngFor="let heading of data.headings">{{ heading }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let person of (filteredPeople | paginate: { itemsPerPage: itemsPerPage, currentPage: p })">
+                <td *ngFor="let cell of person">{{ cell }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>

@@ -1,0 +1,74 @@
+<app-breadcrumb [Title]="'Applications'" [pageTitle]="'Plans'"></app-breadcrumb>
+
+<div class="row">
+    <!-- [ sample-page ] start -->
+    <div class="col-sm-12">
+        <div class="row align-items-center justify-content-center mb-4">
+            <div class="col-auto">
+                <label for="pricing-switch" class="h4 mb-0">Annual</label>
+            </div>
+            <div class="col-auto">
+                <div class="form-check form-switch p-0 m-0">
+                    <input class="form-check-input f-20 m-0 postion-relative" type="checkbox" role="switch" id="pricing-switch" [(ngModel)]="isAnnual"/>
+                </div>
+            </div>
+            <div class="col-auto">
+                <label for="pricing-switch" class="h4 mb-0">Monthly</label>
+            </div>
+        </div>
+
+        <!-- Pricing Plans -->
+        <div class="collapse multi-collapse" [ngClass]="{'show': isAnnual }" id="pricemonth">
+            <div class="row">
+                <div class="col-md-6 col-xxl-3" *ngFor="let plan of pricingPlans.monthly">
+                    <div class="card price-card">
+                        <div class="card-body price-head {{plan.bgColor}}">
+                            <h5 class="text-primary">{{ plan.name }}</h5>
+                            <h2 class="price-price text-primary">${{ plan.price }} <span>/month</span></h2>
+                            <div class="price-icon {{plan.bgColor}}">
+                                <i class="ph-duotone {{plan.icon}} text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled product-list">
+                                <ng-container *ngFor="let item of plan.item">
+                                    <li [ngClass]="{'enable': item.enable}"><i class="ph-duotone ph-check-circle" *ngIf="item.enable"></i>{{item.text}}</li>
+                                </ng-container>
+                            </ul>
+                            <div class="d-grid">
+                                <button class="btn {{plan.buttonClass}}">{{ plan.buttonText }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse multi-collapse" [ngClass]="{'show': !isAnnual}" id="priceyear">
+            <div class="row">
+                <div class="col-md-6 col-xxl-3" *ngFor="let plan of pricingPlans.yearly">
+                    <div class="card price-card">
+                        <div class="card-body price-head {{plan.bgColor}}">
+                            <h5 class="text-primary">{{ plan.name }}</h5>
+                            <h2 class="price-price text-primary">${{ plan.price }} <span>/year</span></h2>
+                            <div class="price-icon {{plan.bgColor}}">
+                                <i class="ph-duotone {{plan.icon}} text-primary"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled product-list">
+                                <ng-container *ngFor="let item of plan.item">
+                                    <li [ngClass]="{'enable': item.enable}"><i class="ph-duotone ph-check-circle" *ngIf="item.enable"></i>{{item.text}}</li>
+                                </ng-container>
+                            </ul>
+                            <div class="d-grid">
+                                <button class="btn {{plan.buttonClass}}">{{ plan.buttonText }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ sample-page ] end -->
+</div>

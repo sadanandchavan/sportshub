@@ -1,0 +1,112 @@
+<app-breadcrumb [Title]="'Online Courses'" [pageTitle]="'Student Add'"></app-breadcrumb>
+
+<!-- [ Main Content ] start -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Basic Information</h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="Enter first name" formControlName="firstName" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter last name" formControlName="lastName" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter email" formControlName="email" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Registration Date</label>
+                                <input type="date" class="form-control" formControlName="registrationDate" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">ID Number</label>
+                                <input type="password" class="form-control" placeholder="Enter ID number" formControlName="idNumber" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Course</label>
+                                <select class="form-select" formControlName="course">
+                                    <option value="Course" >Course</option>
+                                    <option>Course 1</option>
+                                    <option>Course 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Mobile Number</label>
+                                <input type="number" class="form-control" placeholder="Enter Mobile number" formControlName="mobileNumber" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Gender</label>
+                                <select class="form-select" formControlName="gender">
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Parents Name</label>
+                                <input type="text" class="form-control" placeholder="Enter parents name" formControlName="parentsName" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Parents Mobile Number</label>
+                                <input type="number" class="form-control" placeholder="Enter parents mobile number" formControlName="parentsMobileNumber" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" formControlName="dateOfBirth" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Blood Group</label>
+                                <input type="text" class="form-control" placeholder="Enter blood group" formControlName="bloodGroup" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Shipping Address</label>
+                                <textarea class="form-control" rows="2" placeholder="Enter address" formControlName="shippingAddress"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <input class="form-control" type="file" formControlName="file" />
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-end">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ Main Content ] end -->

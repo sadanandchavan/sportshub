@@ -1,0 +1,135 @@
+<nav class="pc-sidebar" [ngClass]="{'pc-sidebar-hide': isSidebarHidden, 'mob-sidebar-active': !isSidebarHidden}"
+  appClickOutside (clickOutside)="closeSidebar()">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a routerLink="/landing" class="b-brand text-primary">
+        <img src="../assets/images/logo-dark.svg" alt="logo image" class="logo-lg" />
+        <span class="badge bg-brand-color-2 rounded-pill ms-2 theme-version">v1.0</span>
+      </a>
+    </div>
+    <ngx-simplebar [options]="options">
+      <div class="navbar-content">
+        <ul class="pc-navbar">
+          <ng-container *ngFor="let item of navItems; let i = index; trackBy: trackByMenuIndex">
+            <li class="pc-caption pc-item">
+              <label>{{ item.menuName }}</label>
+            </li>
+            <ng-container *ngFor="let menuItem of item.menuItems; let j = index; trackBy: trackByMenuIndex">
+              <li class="pc-hasmenu pc-item" [ngClass]="{'pc-trigger active': menuItem.open }">
+                <a class="pc-link" (click)="menuItem.subMenus.length ? toggleCollapse(menuItem) : openLink(menuItem)">
+                  <span class="pc-micon">
+                    <i [class]="'ph-duotone ' + menuItem.icon"></i>
+                  </span>
+                  <span class="pc-mtext" [ngClass]="{'pc-icon-link': menuItem.isLeadingPageIcon}">
+                    {{ menuItem.text }}
+                    <i class="ti ti-link text-primary f-14" *ngIf="menuItem.isLeadingPageIcon"></i>
+                  </span>
+                  <span class="pc-arrow">
+                    <i-feather name="chevron-right" *ngIf="menuItem.subMenus?.length"></i-feather>
+                  </span>
+                  <span *ngIf="menuItem.badge" class="pc-badge">{{ menuItem.badge }}</span>
+                </a>
+
+                <ng-container *ngIf="menuItem.subMenus?.length">
+                  <ul class="pc-submenu" [ngbCollapse]="!menuItem.open">
+                    <li *ngFor="let subMenu of menuItem.subMenus; let k = index; trackBy: trackBySubMenuIndex"
+                      class="pc-item" [ngClass]="{'active': subMenu.link === this.router.url}">
+                      <ng-container *ngIf="subMenu.innerSubMenu?.length; else simpleSubMenu">
+                    <li class="pc-hasmenu pc-item" [ngClass]="{'pc-trigger active': subMenu.subMenuOpen }">
+                      <a class="pc-link" (click)="toggleInnerSubMenuNew(subMenu, menuItem);">
+                        <span class="pc-mtext">{{ subMenu.text | translate }}</span>
+                        <span class="pc-arrow">
+                          <i-feather name="chevron-right"></i-feather>
+                        </span>
+                      </a>
+                      <ul class="pc-submenu" [ngbCollapse]="!subMenu.subMenuOpen">
+                        <li *ngFor="let innerSubMenu of subMenu.innerSubMenu; trackBy: trackBySubMenuIndex"
+                          class="pc-item" [ngClass]="{'active': innerSubMenu.link === this.router.url}">
+                          <a class="pc-link" [routerLink]="innerSubMenu.link" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }">{{ innerSubMenu.text }}</a>
+                        </li>
+                      </ul>
+                    </li>
+                </ng-container>
+                <ng-template #simpleSubMenu>
+                  <a class="pc-link" [routerLink]="subMenu.link" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    {{ subMenu.text }}
+                  </a>
+                </ng-template>
+              </li>
+        </ul>
+        </ng-container>
+        </li>
+        </ng-container>
+        </ng-container>
+        </ul>
+        <div class="card nav-action-card bg-brand-color-4">
+          <div class="card-body" style="background-image: url('../assets/images/layout/nav-card-bg.svg')">
+            <h5 class="text-dark">Help Center</h5>
+            <p class="text-dark text-opacity-75">Please contact us for more questions.</p>
+            <a href="https://phoenixcoded.support-hub.io/" class="btn btn-primary" target="_blank">Go to help Center</a>
+          </div>
+        </div>
+      </div>
+    </ngx-simplebar>
+    <div class="card pc-user-card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar wid-45 rounded-circle" />
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <div class="dropdown">
+              <a href="#" class="arrow-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                data-bs-offset="0,20">
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1 me-2">
+                    <h6 class="mb-0">Jonh Smith</h6>
+                    <small>Administrator</small>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <div class="btn btn-icon btn-link-secondary avtar">
+                      <i class="ph-duotone ph-windows-logo"></i>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-user"></i>
+                      <span>My Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-gear"></i>
+                      <span>Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-lock-key"></i>
+                      <span>Lock Screen</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links">
+                      <i class="ph-duotone ph-power"></i>
+                      <span>Logout</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isSidebarHidden && isMobile" class="pc-menu-overlay" (click)="closeOutSide()"></div>
+  <div *ngIf="isSidebarHidden || !isMobile" (click)="closeOutSide()"></div>
+</nav>

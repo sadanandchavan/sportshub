@@ -1,0 +1,44 @@
+<div class="offcanvas-header">
+    <h3 class="f-w-600 text-truncate">Add Events</h3>
+    <span class="avtar avtar-s btn-link-danger btn-pc-default" data-bs-dismiss="offcanvas" (click)="closeModal()">
+        <i class="ti ti-x f-20"></i>
+    </span>
+</div>
+<div class="offcanvas-body">
+    <form id="pc-form-event" novalidate [formGroup]="formGroup">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="email" class="form-control" id="pc-e-title" placeholder="Enter event title" autofocus formControlName="title"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Venue</label>
+            <input type="email" class="form-control" id="pc-e-venue" placeholder="Enter event venue" formControlName="venue"/>
+        </div>
+        <div class="m-0">
+            <input type="hidden" class="form-control" id="pc-e-sdate" />
+            <input type="hidden" class="form-control" id="pc-e-edate" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" placeholder="Enter event description" rows="3" id="pc-e-description" formControlName="description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Type</label>
+            <select class="form-select" id="pc-e-type" formControlName="className">
+                <ng-container *ngFor="let item of typeArry">
+                    <option [value]="item.className" selected>{{item.text}}</option>
+                </ng-container>
+            </select>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-auto" (click)="closeModal()"><button type="button" class="btn btn-link-danger btn-pc-default" data-bs-dismiss="offcanvas"><i class="align-text-bottom me-1 ti ti-circle-x"></i> Close</button></div>
+            <div class="col-auto">
+                <button id="pc_event_add" type="button" class="btn btn-secondary" data-pc-action="add" (click)="addOrEdit()">
+                    <span id="pc-e-btn-text"><i class="align-text-bottom me-1 ti ti-calendar-plus"></i> 
+                        {{formGroup.get('index').value !== null ? 'Update' : 'Add' }}
+                    </span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

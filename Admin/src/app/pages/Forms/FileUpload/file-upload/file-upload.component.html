@@ -1,0 +1,21 @@
+<app-breadcrumb [Title]="'Forms'" [pageTitle]="'File Upload'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ file-upload ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>File Upload</h5>
+      </div>
+      <div class="card-body">
+        <ngx-dropzone (change)="onSelect($event)" [multiple]="true">
+          <ngx-dropzone-label>Drop files here or click to upload.</ngx-dropzone-label>
+        </ngx-dropzone>
+        <div class="text-center m-t-20">
+          <button class="btn btn-primary" (click)="onUpload()">Upload Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ file-upload ] end -->
+</div>

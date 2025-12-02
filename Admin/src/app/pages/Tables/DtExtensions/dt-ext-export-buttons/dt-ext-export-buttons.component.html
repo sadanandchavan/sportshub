@@ -1,0 +1,247 @@
+<app-breadcrumb [Title]="'DataTable'" [pageTitle]="'Export Button'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <h5>DataTables Extensions</h5>
+    <p class="text-muted">The features that DataTables provides can be greatly enhanced by the use of the plug-ins
+      available on this page, which give many new user interaction and configuration options.</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://datatables.net/extensions/index">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <!-- HTML5 Export Buttons table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header table-card-header">
+        <h5>HTML5 Export Buttons</h5>
+        <small>This example demonstrates these four button types with their default options. The other examples in
+          this section
+          demonstrate some of the options available.</small>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+
+          <div class="button-group">
+            <button class="btn btn-primary" (click)="copyTable()">Copy</button>
+            <button class="btn btn-success" (click)="exportCSV()">Export CSV</button>
+            <button class="btn btn-info" (click)="exportExcel()">Export Excel</button>
+            <button class="btn btn-warning" (click)="printTable()">Print</button>
+          </div>
+          <table id="basic-btn" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredData | paginate: { itemsPerPage: itemsPerPage1, currentPage: p1 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p1 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- HTML5 Export Buttons end -->
+  <!-- Column Selectors table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Column Selectors</h5>
+        <small>All of the data export buttons have an exportOptions option which can be used to specify
+          information about what data
+          should be exported and how.</small>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+
+          <button class="btn btn-primary" (click)="copyTable1()">Copy</button>
+          <button class="btn btn-success" (click)="exportCSV1()">Export CSV</button>
+          <button class="btn btn-info" (click)="exportExcel1()">Export Excel</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Column Visible
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="onDropdownItem1Click()">Name</a></li>
+              <li><a class="dropdown-item" (click)="onDropdownItem2Click()">Position</a></li>
+              <li><a class="dropdown-item" (click)="onDropdownItem3Click()">Office</a></li>
+              <li><a class="dropdown-item" (click)="onDropdownItem4Click()">Age</a></li>
+              <li><a class="dropdown-item" (click)="onDropdownItem5Click()">Start date</a></li>
+              <li><a class="dropdown-item" (click)="onDropdownItem6Click()">Salary</a></li>
+            </ul>
+          </div>
+
+          <table id="cbtn-selectors" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredDataTwo | paginate: { itemsPerPage: itemsPerPage2, currentPage: p2 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p2 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Column Selectors end -->
+  <!-- Excel - Cell Background table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Excel - Cell Background</h5>
+        <small>The Excel export button saves to an XLSX file and the data can be customised before exporting the
+          file using the
+          customize method</small>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+
+          <button class="btn btn-info" (click)="exportExcel()">Export Excel</button>
+          <table id="excel-bg" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredDataThree | paginate: { itemsPerPage: itemsPerPage3, currentPage: p3 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p3 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Excel - Cell Background end -->
+  <!-- Custom File (JSON) table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Custom File (JSON)</h5>
+        <small>This example makes use of buttons.exportData() to get data from the host DataTable and then create
+          a file with JSON
+          data</small>
+      </div>
+      <div class="card-body">
+        <button (click)="downloadButtonJson()" class="btn btn-info">Download Button JSON</button>
+
+        <div class="dt-responsive table-responsive">
+          <table id="pdf-json" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredDataFour | paginate: { itemsPerPage: itemsPerPage4, currentPage: p4 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p4 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Custom File (JSON) table end -->
+</div>

@@ -1,0 +1,55 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Add Row'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Add Rows</h5>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" (ngModelChange)="filterData()" placeholder="Search..."
+          class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body table-border-style">
+        <button class="btn btn-light-primary mb-3" id="add" (click)="addRows()">Add 1000 Rows</button>
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-addrow">
+            <thead>
+              <tr>
+                <th (click)="changeSort('name')">Name <span
+                    *ngIf="sortField === 'name'">{{ sortDirection === 'asc' ? '▲' : '▼' }}</span></th>
+                <th (click)="changeSort('ext')">Ext. <span
+                    *ngIf="sortField === 'ext'">{{ sortDirection === 'asc' ? '▲' : '▼' }}</span></th>
+                <th (click)="changeSort('city')">City <span
+                    *ngIf="sortField === 'city'">{{ sortDirection === 'asc' ? '▲' : '▼' }}</span></th>
+                <th (click)="changeSort('startDate')">Start Date <span
+                    *ngIf="sortField === 'startDate'">{{ sortDirection === 'asc' ? '▲' : '▼' }}</span></th>
+                <th (click)="changeSort('completion')">Completion <span
+                    *ngIf="sortField === 'completion'">{{ sortDirection === 'asc' ? '▲' : '▼' }}</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="let row of filteredData | paginate: { itemsPerPage: itemsPerPage, currentPage: p }; let i = index">
+                <td>{{ row.name }}</td>
+                <td>{{ row.ext }}</td>
+                <td>{{ row.city }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.completion }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>

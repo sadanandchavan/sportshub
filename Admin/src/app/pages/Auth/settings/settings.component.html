@@ -1,0 +1,79 @@
+<app-breadcrumb [Title]="'Site Settings'" [pageTitle]="'Pages'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- [ site settings ] start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Site setting</h5>
+      </div>
+      <div class="card-body">
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Site name</label>
+          <div class="col-lg-6 col-sm-7">
+            <input type="text" class="form-control" placeholder="Enter site name" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Unique ID</label>
+          <div class="col-lg-6 col-sm-7">
+            <input type="text" class="form-control" placeholder="Enter unique id" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Site Url</label>
+          <div class="col-lg-6 col-sm-7">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter site url" />
+              <button class="btn btn-primary" type="button"><i class="ti ti-copy align-middle"></i> Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Affiliate ID</label>
+          <div class="col-lg-6 col-sm-7">
+            <input type="text" class="form-control" placeholder="Enter affiliate id" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Favicon
+            <span class="link-secondary" placement="top"
+              ngbTooltip="Upload a 32 x 32 pixels PNG, JPG or SVG to display in the browser tabs during the website experience.">
+              <i class="ph-duotone ph-question"></i>
+            </span>
+          </label>
+          <div class="col-lg-6 col-sm-7">
+            <ngx-dropzone (change)="onSelect($event)" [multiple]="true">
+              <ngx-dropzone-label>Drop files here or click to upload.</ngx-dropzone-label>
+            </ngx-dropzone>
+            <a href="#" class="link-primary text-sm">Need help?</a>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Webclip
+            <span class="link-secondary" placement="top"
+              ngbTooltip="Upload a 32 x 32 pixels PNG, JPG or SVG to display in the browser tabs during the website experience."
+              data-bs-html="true">
+              <i class="ph-duotone ph-question"></i>
+            </span>
+          </label>
+          <div class="col-lg-6 col-sm-7">
+            <ngx-dropzone (change)="onSelect($event)" [multiple]="true">
+              <ngx-dropzone-label>Drop files here or click to upload.</ngx-dropzone-label>
+            </ngx-dropzone>
+            <a href="#" class="link-primary text-smin">Need help?</a>
+          </div>
+        </div>
+        <div class="row mb-0">
+          <span class="col-form-label col-sm-3 text-sm-end"></span>
+          <div class="col-lg-6 col-sm-7">
+            <button class="btn btn-primary me-2">Apply Change</button>
+            <button class="btn btn-outline-secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ site settings ] end -->
+</div>

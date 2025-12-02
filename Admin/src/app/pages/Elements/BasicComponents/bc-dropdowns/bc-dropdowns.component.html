@@ -1,0 +1,814 @@
+<div class="row">
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <a href="#" class="d-inline-flex align-items-center d-xl-none btn btn-dark mb-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_component"><i class="ti ti-menu-2 me-2"></i>
+      Explore Components
+    </a>
+    <h2>Dropdowns</h2>
+    <p class="text-muted">Toggle contextual overlays for displaying lists of links and more with the Bootstrap
+      dropdown plugin.</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank" href="https://getbootstrap.com/docs/5.2/components/dropdowns/">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class="row btn-page">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Dropdown Button</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown1="ngbDropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown1)">Primary</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown2="ngbDropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown2)">Secondary</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown3="ngbDropdown">
+          <button class="btn btn-success dropdown-toggle" type="button" (click)="toggleDropdown(dropdown3)">Success</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown4="ngbDropdown">
+          <button class="btn btn-danger dropdown-toggle" type="button" (click)="toggleDropdown(dropdown4)">Danger</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown5="ngbDropdown">
+          <button class="btn btn-warning dropdown-toggle" type="button" (click)="toggleDropdown(dropdown5)">Warning</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown6="ngbDropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdown6)">Info</button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Split Dropdown Button</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown7="ngbDropdown">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown7)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown8="ngbDropdown">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown8)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown9="ngbDropdown">
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown9)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown10="ngbDropdown">
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown10)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown11="ngbDropdown">
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown11)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown12="ngbDropdown">
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown12)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Outline Dropdown Button</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="d-flex flex-wrap gap-2">
+          <div class="btn-group-dropdown" ngbDropdown #dropdown13="ngbDropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown13)">
+              Primary
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group-dropdown" ngbDropdown #dropdown14="ngbDropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown14)">
+              Secondary
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group-dropdown" ngbDropdown #dropdown15="ngbDropdown">
+            <button class="btn btn-outline-success dropdown-toggle" type="button" (click)="toggleDropdown(dropdown15)">
+              Success
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group-dropdown" ngbDropdown #dropdown16="ngbDropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" (click)="toggleDropdown(dropdown16)">
+              Danger
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group-dropdown" ngbDropdown #dropdown17="ngbDropdown">
+            <button class="btn btn-outline-warning dropdown-toggle" type="button" (click)="toggleDropdown(dropdown17)">
+              Warning
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group-dropdown" ngbDropdown #dropdown18="ngbDropdown">
+            <button class="btn btn-outline-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdown18)">
+              Info
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Split Outline Dropdown Button</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown19="ngbDropdown">
+          <button type="button" class="btn btn-outline-primary">Primary</button>
+          <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown19)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown20="ngbDropdown">
+          <button type="button" class="btn btn-outline-secondary">Secondary</button>
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown20)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown21="ngbDropdown">
+          <button type="button" class="btn btn-outline-success">Success</button>
+          <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown21)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown22="ngbDropdown">
+          <button type="button" class="btn btn-outline-danger">Danger</button>
+          <button type="button" class="btn btn-outline-danger dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown22)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown23="ngbDropdown">
+          <button type="button" class="btn btn-outline-warning">Warning</button>
+          <button type="button" class="btn btn-outline-warning dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown23)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown24="ngbDropdown">
+          <button type="button" class="btn btn-outline-info">Info</button>
+          <button type="button" class="btn btn-outline-info dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown24)">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Dark dropdowns</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown25="ngbDropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown25)">
+            Primary
+          </button>
+          <div class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown26="ngbDropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown26)">
+            Secondary
+          </button>
+          <div class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown27="ngbDropdown">
+          <button class="btn btn-success dropdown-toggle" type="button" (click)="toggleDropdown(dropdown27)">
+            Success
+          </button>
+          <div class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown28="ngbDropdown">
+          <button class="btn btn-danger dropdown-toggle" type="button" (click)="toggleDropdown(dropdown28)">
+            Danger
+          </button>
+          <div class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown29="ngbDropdown">
+          <button class="btn btn-warning dropdown-toggle" type="button" (click)="toggleDropdown(dropdown29)">
+            Warning
+          </button>
+          <div class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown30="ngbDropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdown30)">
+            Info
+          </button>
+          <div class="dropdown-menu dropdown-menu-dark" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript: void(0);">Action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Dropright</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="d-flex flex-wrap gap-2">
+          <div class="btn-group dropend" ngbDropdown #dropdown31="ngbDropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" (click)="toggleDropdown(dropdown31)">
+              Dropright
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <div class="btn-group dropend" ngbDropdown #dropdown32="ngbDropdown">
+            <button type="button" class="btn btn-light-primary" (click)="toggleDropdown(dropdown32)">
+              Split dropup
+            </button>
+            <button type="button" class="btn btn-light-primary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown32)">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Dropleft</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="d-flex flex-wrap gap-2">
+          <!-- Dropstart Dropdown -->
+          <div class="btn-group dropstart" ngbDropdown #dropdown33="ngbDropdown">
+            <button type="button" class="btn btn-secondary dropdown-toggle" (click)="toggleDropdown(dropdown33)">
+              Dropstart
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <!-- Split Dropup Dropdown -->
+          <div class="btn-group dropstart" ngbDropdown #dropdown34="ngbDropdown">
+            <button type="button" class="btn btn-light-secondary" (click)="toggleDropdown(dropdown34)">
+              Split dropup
+            </button>
+            <button type="button" class="btn btn-light-secondary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown34)">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Dropup</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="d-flex flex-wrap gap-2">
+          <!-- Dropup Dropdown -->
+          <div class="btn-group dropup" ngbDropdown #dropdown35="ngbDropdown">
+            <button type="button" class="btn btn-success dropdown-toggle" (click)="toggleDropdown(dropdown35)">
+              Dropup
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+
+          <!-- Split Dropup Dropdown -->
+          <div class="btn-group dropup" ngbDropdown #dropdown36="ngbDropdown">
+            <button type="button" class="btn btn-light-success">Split dropup</button>
+            <button type="button" class="btn btn-light-success dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown36)">
+              <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <a class="dropdown-item" href="javascript: void(0);">Action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Another action</a>
+              <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Menu alignment</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group" ngbDropdown #dropdown37="ngbDropdown">
+          <button type="button" class="btn btn-secondary dropdown-toggle" (click)="toggleDropdown(dropdown37)">
+            Right-aligned menu example
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Another action</button></li>
+            <li><button class="dropdown-item" type="button">Something else here</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Responsive alignment</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="row">
+          <div class="col-12">
+            <h6>Left-aligned but right aligned when large screen</h6>
+            <div class="text-sm-start text-center">
+              <div class="btn-group mb-2" ngbDropdown #dropdown38="ngbDropdown">
+                <button type="button" class="btn btn-light-secondary dropdown-toggle" (click)="toggleDropdown(dropdown38)" data-bs-display="static">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu dropdown-menu-lg-end" ngbDropdownMenu>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-3">
+            <h6>Right-aligned but left aligned when large screen</h6>
+            <div class="text-sm-start text-center">
+              <div class="btn-group mb-2" ngbDropdown #dropdown39="ngbDropdown">
+                <button type="button" class="btn btn-light-secondary dropdown-toggle" (click)="toggleDropdown(dropdown39)" data-bs-display="static" aria-expanded="false">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" ngbDropdownMenu>
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Alignment options</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdown40="ngbDropdown">
+          <button class="btn btn-light-primary dropdown-toggle" type="button" (click)="toggleDropdown(dropdown40)">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdown41="ngbDropdown">
+          <button type="button" class="btn btn-light-primary dropdown-toggle" (click)="toggleDropdown(dropdown41)">
+            Right-aligned menu
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdown42="ngbDropdown">
+          <button type="button" class="btn btn-light-primary dropdown-toggle" (click)="toggleDropdown(dropdown42)" data-bs-display="static" aria-expanded="false">
+            Left-aligned, right-aligned lg
+          </button>
+          <ul class="dropdown-menu dropdown-menu-lg-end" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdown43="ngbDropdown">
+          <button type="button" class="btn btn-light-primary dropdown-toggle" (click)="toggleDropdown(dropdown43)" data-bs-display="static" aria-expanded="false">
+            Right-aligned, left-aligned lg
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2 dropstart" ngbDropdown #dropdown44="ngbDropdown">
+          <button type="button" class="btn btn-light-primary dropdown-toggle" (click)="toggleDropdown(dropdown44)">
+            Dropstart
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2 dropend" ngbDropdown #dropdown45="ngbDropdown">
+          <button type="button" class="btn btn-light-primary dropdown-toggle" (click)="toggleDropdown(dropdown45)">
+            Dropend
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2 dropup" ngbDropdown #dropdown46="ngbDropdown">
+          <button type="button" class="btn btn-light-primary dropdown-toggle" (click)="toggleDropdown(dropdown46)">
+            Dropup
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Text</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown47="ngbDropdown">
+          <button class="btn btn-light-danger dropdown-toggle" type="button" (click)="toggleDropdown(dropdown47)">
+            Text
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu>
+            <div class="p-4">
+              <h6>Some title example</h6>
+              <p class="mb-2 text-muted small">And this is more</p>
+              <p class="mb-0 text-muted">Some example text that's free-flowing within the dropdown menu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Forms</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mb-2 me-2" ngbDropdown #dropdown48="ngbDropdown">
+          <button class="btn btn-light-success dropdown-toggle" type="button" (click)="toggleDropdown(dropdown48)">
+            Forms
+          </button>
+          <div class="dropdown-menu" ngbDropdownMenu style="min-width: 16rem">
+            <form class="px-4 py-3">
+              <div class="mb-3">
+                <label for="exampleDropdownFormEmail1" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password" />
+              </div>
+              <div class="mb-3">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="dropdownCheck" />
+                  <label class="form-check-label" for="dropdownCheck">Remember me</label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+              <button type="submit" class="btn btn-light btn-sm">Reset</button>
+            </form>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">New around here? Sign up</a>
+            <a class="dropdown-item" href="#">Forgot password?</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+      <div class="card-header">
+        <h5>Offset & Reference</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="dropdown me-1" ngbDropdown #dropdown49="ngbDropdown">
+          <button type="button" class="btn btn-secondary dropdown-toggle" (click)="toggleDropdown(dropdown49)" data-bs-offset="10,20">
+            Offset
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuOffset">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="btn-group" ngbDropdown #dropdown50="ngbDropdown">
+          <button type="button" class="btn btn-secondary">Reference</button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" (click)="toggleDropdown(dropdown50)" id="dropdownMenuReference" data-bs-reference="parent">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuReference">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Auto close behavior</h5>
+      </div>
+      <div class="card-body pc-component">
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdownDefault="ngbDropdown">
+          <button class="btn btn-light-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdownDefault)" id="defaultDropdown" data-bs-auto-close="true" aria-expanded="false">
+            Default dropdown
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="defaultDropdown">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdownClickableOutside="ngbDropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdownClickableOutside)" id="dropdownMenuClickableOutside" data-bs-auto-close="inside" aria-expanded="false">
+            Clickable outside
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuClickableOutside">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdownClickableInside="ngbDropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdownClickableInside)" id="dropdownMenuClickableInside" data-bs-auto-close="outside" aria-expanded="false">
+            Clickable inside
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuClickableInside">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group mr-2 mb-2" ngbDropdown #dropdownManualClose="ngbDropdown">
+          <button class="btn btn-light-info dropdown-toggle" type="button" (click)="toggleDropdown(dropdownManualClose)" id="dropdownMenuClickable" data-bs-auto-close="false" aria-expanded="false">
+            Manual close
+          </button>
+          <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="dropdownMenuClickable">
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <li><a class="dropdown-item" href="#">Menu item</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

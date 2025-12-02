@@ -1,0 +1,102 @@
+<app-breadcrumb [Title]="'DataTable'" [pageTitle]="'FixedColumns'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <h5>DataTables Extensions</h5>
+    <p class="text-muted">The features that DataTables provides can be greatly enhanced by the use of the plug-ins
+      available on this page, which give many new user interaction and configuration options.</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://datatables.net/extensions/index">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <!-- Left And Right Fixed Columns start -->
+  <div class="col-xxl-6 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Left and Right Fixed Columns</h5>
+        <small>FixedColumns allows columns to be fixed from both the left and the right hand sides of the
+          table.</small>
+      </div>
+      <div class="card-body">
+        <div class="table-container">
+          <table id="left-right-fix" class="table stripe row-border order-column">
+            <thead>
+              <tr>
+                <th (click)="sortData('firstName')">First name</th>
+                <th (click)="sortData('lastName')">Last name</th>
+                <th (click)="sortData('position')">Position</th>
+                <th (click)="sortData('office')">Office</th>
+                <th (click)="sortData('age')">Age</th>
+                <th (click)="sortData('startDate')">Start date</th>
+                <th (click)="sortData('salary')">Salary</th>
+                <th (click)="sortData('extn')">Extn.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+                <td>{{ employee.firstName }}</td>
+                <td>{{ employee.lastName }}</td>
+                <td>{{ employee.position }}</td>
+                <td>{{ employee.office }}</td>
+                <td>{{ employee.age }}</td>
+                <td>{{ employee.startDate }}</td>
+                <td>{{ employee.salary }}</td>
+                <td>{{ employee.extn }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xxl-6 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Right Fixed Column</h5>
+        <small>FixedColumns has the ability to freeze columns on both the left and the right hand sides of the
+          table. By default it will
+          fix the first column on the left, but using the initialization parameters</small>
+      </div>
+      <div class="card-body">
+        <div class="table-wrapper">
+          <table id="right-fix" class="table stripe row-border order-column">
+            <thead>
+              <tr>
+                <th (click)="sortData('firstName')">First name</th>
+                <th (click)="sortData('lastName')">Last name</th>
+                <th (click)="sortData('position')">Position</th>
+                <th (click)="sortData('office')">Office</th>
+                <th (click)="sortData('age')">Age</th>
+                <th (click)="sortData('startDate')">Start date</th>
+                <th (click)="sortData('salary')">Salary</th>
+                <th (click)="sortData('extn')">Extn.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of tableData">
+                <td>{{ employee.firstName }}</td>
+                <td>{{ employee.lastName }}</td>
+                <td>{{ employee.position }}</td>
+                <td>{{ employee.office }}</td>
+                <td>{{ employee.age }}</td>
+                <td>{{ employee.startDate }}</td>
+                <td>{{ employee.salary }}</td>
+                <td>{{ employee.extn }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Left And Right Fixed end -->
+</div>

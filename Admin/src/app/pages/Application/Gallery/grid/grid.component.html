@@ -1,0 +1,47 @@
+<app-breadcrumb [Title]="'Gallery'" [pageTitle]="'Grid'"></app-breadcrumb>
+
+
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>New Publish</h5>
+      </div>
+      <div class="card-body">
+        <div class="grid row g-3">
+          <div *ngFor="let item of newPublishItems; let i = index" class="col-xl-3 col-md-4 col-sm-6">
+            <a (click)="open(i)" class="card-gallery">
+              <img class="img-fluid" [src]="item.src" [alt]="item.alt" />
+              <div class="gallery-hover-data card-body justify-content-end">
+                <div>
+                  <p class="text-white mb-0 text-truncate w-100">{{ item.title }}</p>
+                  <span class="text-white text-opacity-75 mb-0 text-sm text-truncate w-100">{{ item.date }}</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h5>Old Publish</h5>
+      </div>
+      <div class="card-body">
+        <div class="grid row g-3">
+          <div *ngFor="let item of oldPublishItems; let i = index" class="col-xl-3 col-md-4 col-sm-6">
+            <a (click)="open(i)" class="card-gallery" href="javascript:void(0)">
+              <img class="img-fluid" [src]="item.src" [alt]="item.alt" />
+              <div class="gallery-hover-data card-body justify-content-end">
+                <div>
+                  <p class="text-white mb-0 text-truncate w-100">{{ item.title }}</p>
+                  <span class="text-white text-opacity-75 mb-0 text-sm text-truncate w-100">{{ item.date }}</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+/* ac-datepicker.component.css */
+.highlight-today {
+  background-color: #dff0d8 !important; /* Background color for today's date */
+  color: #3c763d !important; /* Text color for today's date */
+  font-weight: bold; /* Optional: Make text bold to highlight */
+}

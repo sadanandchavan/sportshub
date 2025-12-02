@@ -1,0 +1,68 @@
+<app-breadcrumb [Title]="'Online Courses'" [pageTitle]="'Student List'"></app-breadcrumb>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-sm-flex align-items-center justify-content-between">
+                    <h5 class="mb-3 mb-sm-0">Student list</h5>
+                    <div>
+                        <a href="student-apply" class="btn btn-outline-secondary">Apply Student List</a>
+                        <a href="student-add" class="btn btn-primary">Add Student</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body pt-3">
+                <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2" />
+                <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+                    <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+                </select>
+                <div class="table-responsive">
+                    <table class="table table-hover" id="pc-dt-simple">
+                        <thead>
+                            <tr>
+                                <th (click)="sortBy('name')">Name</th>
+                                <th (click)="sortBy('mobile')">Mobile</th>
+                                <th (click)="sortBy('qualification')">Qualification</th>
+                                <th (click)="sortBy('email')">Email</th>
+                                <th (click)="sortBy('admissionDate')">Admission Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let student of filteredStudents | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img [src]="student.image" alt="user image" class="img-radius wid-40" />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">{{ student.name }}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>{{ student.mobile }}</td>
+                                <td>{{ student.qualification }}</td> <!-- Ensure this is correct -->
+                                <td>{{ student.email }}</td>
+                                <td>{{ student.admissionDate }}</td>
+                                <td>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-eye f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-edit f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-trash f-20"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

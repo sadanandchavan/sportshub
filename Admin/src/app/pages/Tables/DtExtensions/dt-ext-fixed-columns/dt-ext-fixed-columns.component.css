@@ -1,0 +1,74 @@
+/* Container for the table */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  position: relative;
+}
+
+/* Style for the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for the fixed header */
+.table thead th {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Adjusts the position of the sticky header */
+  background-color: #f9f9f9; /* Background color for the header */
+  z-index: 1; /* Ensures the header is above the scrollable content */
+}
+
+/* Style for the table body with scrolling */
+.table-container {
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Optional: Style for table rows and cells */
+.table tbody tr {
+  border-bottom: 1px solid #ddd; /* Border between rows */
+}
+
+.table th, .table td {
+  padding: 8px; /* Adjust padding as needed */
+  text-align: left;
+}
+/* Container for the table */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+  position: relative;
+}
+
+/* Style for the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for the fixed header */
+.table thead th {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Adjusts the position of the sticky header */
+  background-color: #f9f9f9; /* Background color for the header */
+  z-index: 1; /* Ensures the header is above the scrollable content */
+}
+
+/* Style for the table body with scrolling */
+.table-wrapper {
+  max-height: 400px; /* Adjust as needed */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Optional: Style for table rows and cells */
+.table tbody tr {
+  border-bottom: 1px solid #ddd; /* Border between rows */
+}
+
+.table th, .table td {
+  padding: 8px; /* Adjust padding as needed */
+  text-align: left;
+}

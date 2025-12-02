@@ -1,0 +1,7 @@
+ngx-simplebar {
+    height: calc(100vh - 340px);
+}
+
+.simply-bar-sidebar{
+    height: calc(100vh - 550px);
+}

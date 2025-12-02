@@ -1,0 +1,162 @@
+<app-breadcrumb [Title]="'DataTable'" [pageTitle]="'Source Data'"></app-breadcrumb>
+<div class="row">
+  <!-- [ sample-page ] start -->
+  <div class="col-sm-12">
+    <div class="card table-card">
+      <div class="card-body p-4">
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Team name</label>
+          <div class="col-lg-6 col-sm-8">
+            <input type="text" class="form-control" placeholder="Enter team name" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Team Email ID</label>
+          <div class="col-lg-6 col-sm-8">
+            <input type="email" class="form-control" placeholder="Enter email id" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Organization</label>
+          <div class="col-lg-6 col-sm-8">
+            <select class="form-select" aria-label="Default select example">
+              <option>Select Organization</option>
+              <option>SR.Pvt.Ltd</option>
+              <option>JCBK.Pvt.Ltd</option>
+              <option>SMT.Pvt.Ltd</option>
+              <option>DDMS.Pvt.Ltd</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Location</label>
+          <div class="col-lg-6 col-sm-8">
+            <select class="form-select" aria-label="Default select example">
+              <option>Select Location</option>
+              <option>India</option>
+              <option>Australia</option>
+              <option>Indonasia</option>
+              <option>Malaysia</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Team Member</label>
+          <div class="col-lg-6 col-sm-8">
+            <select class="form-select" multiple>
+              <option>Select Team Member</option>
+              <option>user One</option>
+              <option>user Two</option>
+              <option>user Three</option>
+              <option>user Four</option>
+              <option>user Five</option>
+              <option>user Six</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-form-label col-sm-3 text-sm-end">Team leader</label>
+          <div class="col-lg-6 col-sm-8">
+            <select class="form-select" aria-label="Default select example">
+              <option>Select Team leader</option>
+              <option>user One</option>
+              <option>user Two</option>
+              <option>user Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-0">
+          <span class="col-form-label col-sm-3 text-sm-end"></span>
+          <div class="col-lg-6 col-sm-8">
+            <button class="btn btn-primary me-2">Create Team</button>
+            <button class="btn btn-outline-secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body table-card">
+        <div class="table-controls">
+          <!-- Search Input for First Table -->
+          <input type="text" [(ngModel)]="searchText1" placeholder="Search..." class="form-control mb-2" />
+
+          <!-- Entries per Page Dropdown for First Table -->
+          <select [(ngModel)]="itemsPerPage1" class="form-control mb-2">
+            <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+          </select>
+        </div>
+        <table class="table tbl-product" id="pc-dt-simple">
+          <thead>
+            <tr>
+              <th class="text-end">#</th>
+              <th>Name</th>
+              <th>Organization</th>
+              <th>Team Leader</th>
+              <th>Members</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of data | paginate: { itemsPerPage: itemsPerPage, currentPage: page }; let i = index">
+              <td class="text-end">{{ (page - 1) * itemsPerPage + i + 1 }}</td>
+              <td>
+                <div class="row">
+                  <div class="col-auto pe-0">
+                    <div [ngClass]="item.iconClass" [ngStyle]="{'background-color': item.iconBg}">
+                      <i [ngClass]="item.icon"></i>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <h6 class="mb-1">{{ item.name }}</h6>
+                    <a class="text-muted f-12 text-hover-primary" [href]="'mailto:' + item.email">{{ item.email }}</a>
+                  </div>
+                </div>
+              </td>
+              <td><a class="text-muted text-hover-primary" [href]="item.orgLink">{{ item.organization }}</a></td>
+              <td>
+                <div class="row align-items-center">
+                  <div class="col-auto pe-0">
+                    <img [src]="item.leaderImg" alt="user-image" class="wid-40 rounded" />
+                  </div>
+                  <div class="col">
+                    <h6 class="mb-0">{{ item.leaderName }}</h6>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="user-group">
+                  <img *ngFor="let member of item.members" [src]="member.img" alt="user-image" class="avtar" [attr.data-bs-toggle]="'tooltip'" [attr.data-bs-title]="member.name" />
+                  <span class="avtar rounded-circle bg-light-primary text-primary">{{ item.extraMembers }}</span>
+                </div>
+              </td>
+              <td>
+                <span>{{ item.location }}</span>
+                <div class="prod-action-links">
+                  <ul class="list-inline me-auto mb-0">
+                    <li class="list-inline-item align-bottom" placement="top" ngbTooltip="View">
+                      <a href="#" class="avtar avtar-xs btn-link-warning btn-pc-default" data-bs-toggle="offcanvas" data-bs-target="#productOffcanvas">
+                        <i class="ti ti-eye f-18"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item align-bottom" placement="top" ngbTooltip="Edit">
+                      <a href="javascript:void(0);" class="avtar avtar-xs btn-link-success btn-pc-default">
+                        <i class="ti ti-edit-circle f-18"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item align-bottom" placement="top" ngbTooltip="Delete">
+                      <a href="#" class="avtar avtar-xs btn-link-danger btn-pc-default">
+                        <i class="ti ti-trash f-18"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pagination controls -->
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+  <!-- [ sample-page ] end -->
+</div>

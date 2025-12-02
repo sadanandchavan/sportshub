@@ -1,0 +1,261 @@
+<app-breadcrumb [Title]="'DataTable'" [pageTitle]="'RowReorder'"></app-breadcrumb>
+
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <h5>DataTables Extensions</h5>
+    <p class="text-muted">The features that DataTables provides can be greatly enhanced by the use of the plug-ins
+      available on this page, which give many new user interaction and configuration options.</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://datatables.net/extensions/index">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <!-- Basic row reorder table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Row Reorder</h5>
+        <small>Note that sorting is enabled on all columns in this example - you may wish to restrict sorting to
+          just the sequence
+          column to help prevent potential user confusion if they reorder when the table ordering is performed on
+          a different
+          column.</small>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input for First Table -->
+        <input type="text" [(ngModel)]="searchText1" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown for First Table -->
+        <select [(ngModel)]="itemsPerPage1" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="basic-row-reorder" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredData | paginate: { itemsPerPage: itemsPerPage1, currentPage: p1 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <pagination-controls (pageChange)="p1 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Basic row reorder table end -->
+  <!-- Full row selection table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Full Row Selection</h5>
+        <small>By default only the first cell in the row will trigger the reordering action. This example shows
+          the entire row being
+          able to start the reorder. Simply click and drag anywhere on the row</small>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input for Second Table -->
+        <input type="text" [(ngModel)]="searchText2" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown for Second Table -->
+        <select [(ngModel)]="itemsPerPage2" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="full-row-reorder" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredDataTwo | paginate: { itemsPerPage: itemsPerPage2, currentPage: p2 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <pagination-controls (pageChange)="p2 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Full row selection table end -->
+  <!-- Responsive integration table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Responsive Integration</h5>
+        <small>This example shows RowReorder being used with the Responsive extension for DataTables and also that
+          it provides support
+          for touch inputs to perform a row reorder. Responsive is particularly useful with mobile devices, but
+          can also be useful
+          on desktops where complex data sets are shown in the DataTable.</small>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input for Third Table -->
+        <input type="text" [(ngModel)]="searchText3" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown for Third Table -->
+        <select [(ngModel)]="itemsPerPage3" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="responsive-reorder" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredDataThree | paginate: { itemsPerPage: itemsPerPage3, currentPage: p3 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <pagination-controls (pageChange)="p3 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Responsive integration table end -->
+  <!-- Reorder events table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Reorder Events</h5>
+        <small>Providing the UI to allow end users to reorder a table is only half of the story - likely you will
+          wish to have the
+          changes caused by the end user to effect a database or some other data store.</small>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input for Fourth Table -->
+        <input type="text" [(ngModel)]="searchText4" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown for Fourth Table -->
+        <select [(ngModel)]="itemsPerPage4" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="reorder-events" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of filteredDataFour | paginate: { itemsPerPage: itemsPerPage4, currentPage: p4 }">
+                <td>{{ row.name }}</td>
+                <td>{{ row.position }}</td>
+                <td>{{ row.office }}</td>
+                <td>{{ row.age }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <pagination-controls (pageChange)="p4 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Reorder events table end -->
+</div>

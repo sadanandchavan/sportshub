@@ -1,0 +1,70 @@
+<app-breadcrumb [Title]="'Online Courses'" [pageTitle]="'Pricing'"></app-breadcrumb>
+
+<!-- [ Main Content ] start -->
+<div class="row">
+    <div class="col-12">
+        <div class="card border-0 shadow-none bg-transparent mb-1">
+            <div class="card-body p-2">
+                <div class="row align-items-center mb-3">
+                    <div class="col">
+                        <h5>Plans & Pricing</h5>
+                        <p>Every paid plan comes with educational resources and training to support you on your journey, along with a 30-day money-back guarantee.</p>
+                    </div>
+                    <div class="col-auto">
+                        <ul class="nav nav-pills nav-price" id="pills-tab" role="tablist">
+                            <li class="nav-item" *ngFor="let tab of tabs" role="presentation">
+                                <button class="nav-link" [ngClass]="{ 'active': activeTab === tab.label}" (click)="activeTab = tab.label">
+                                    {{ tab.label }} 
+                                    <span *ngIf="tab.badge" class="badge ms-2" [ngClass]="tab.badgeClass">{{ tab.badge }}</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" [ngClass]="{ 'show': activeTab === 'Monthly', 'active': activeTab === 'Monthly' }" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 col-lg-4" *ngFor="let plan of pricingPlans.Monthly">
+                        <div class="card price-card" [ngClass]="{'price-popular': plan.isPopular}">
+                            <div class="card-body">
+                                <div class="price-head v2">
+                                    <span *ngIf="plan.isPopular" class="badge f-12 bg-success mb-3">Popular</span>
+                                    <h5 class="mb-0">{{ plan.name }}</h5>
+                                    <p class="text-muted">{{ plan.services }}</p>
+                                    <div class="price-price mt-4">{{ plan.price }} <span class="text-muted"> Lifetime</span></div>
+                                    <div class="d-grid"><a class="btn" [ngClass]="{'btn-primary': plan.isPopular, 'btn-outline-secondary': !plan.isPopular}" href="#">Buy Now</a></div>
+                                </div>
+                                <ul class="list-group list-group-flush product-list">
+                                    <li class="list-group-item" *ngFor="let item of plan.items" [ngClass]="{'enable': item.enable}">{{ item.text }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" [ngClass]="{ 'show': activeTab === 'Yearly', 'active': activeTab === 'Yearly' }" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6 col-lg-4" *ngFor="let plan of pricingPlans.Yearly">
+                        <div class="card price-card" [ngClass]="{'price-popular': plan.isPopular}">
+                            <div class="card-body">
+                                <div class="price-head v2">
+                                    <span *ngIf="plan.isPopular" class="badge f-12 bg-success mb-3">Popular</span>
+                                    <h5 class="mb-0">{{ plan.name }}</h5>
+                                    <p class="text-muted">{{ plan.services }}</p>
+                                    <div class="price-price mt-4">{{ plan.price }} <span class="text-muted"> Lifetime</span></div>
+                                    <div class="d-grid"><a class="btn" [ngClass]="{'btn-primary': plan.isPopular, 'btn-outline-secondary': !plan.isPopular}" href="#">Buy Now</a></div>
+                                </div>
+                                <ul class="list-group list-group-flush product-list">
+                                    <li class="list-group-item" *ngFor="let item of plan.items" [ngClass]="{'enable': item.enable}">{{ item.text }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ Main Content ] end -->

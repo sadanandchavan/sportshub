@@ -1,0 +1,103 @@
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <a href="#" class="d-inline-flex align-items-center d-xl-none btn btn-dark mb-3" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas_component"><i class="ti ti-menu-2 me-2"></i>
+      Explore Components
+    </a>
+    <h2>DatePicker</h2>
+    <p class="text-muted">Bootstrap-datepicker provides a flexible datepicker widget in the Bootstrap style.
+    </p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://bootstrap-datepicker.readthedocs.io/en/latest/">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<!-- [ Main Content ] start -->
+<div class="row">
+  <!-- [ bootstrap-datetimepicker ] start -->
+  <div class="col-xl-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Days of Week Disabled</h5>
+      </div>
+      <div class="card-body">
+        <input class="form-control" mwlFlatpickr [flatpickrOptions]="defaultDateOptions" placeholder="YYYY-MM-DD"
+          placeholder="Select Time">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Days of Week Highlighted</h5>
+      </div>
+      <div class="card-body">
+        <input class="form-control" mwlFlatpickr [flatpickrOptions]="shortDateOptions" placeholder="YYYY-MM-DD"
+          placeholder="Select Time">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>AutoClose</h5>
+      </div>
+      <div class="card-body"><input class="form-control" mwlFlatpickr [flatpickrOptions]="weekNumbersOptions"
+          placeholder="YYYY-MM-DD" placeholder="Select Time">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>DatesDisabled</h5>
+      </div>
+      <div class="card-body">
+        <input class="form-control" mwlFlatpickr [flatpickrOptions]="disableDateOptions" placeholder="YYYY-MM-DD"
+          placeholder="Select Time">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Today Highlight</h5>
+      </div>
+      <div class="card-body">
+        <input class="form-control" mwlFlatpickr [flatpickrOptions]="humanFriendlyOptions" placeholder="YYYY-MM-DD"
+          placeholder="Select Time">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Calendar Weeks</h5>
+      </div>
+      <div class="card-body">
+        <input class="form-control" mwlFlatpickr [flatpickrOptions]="timePicker24hOptions" placeholder="YYYY-MM-DD"
+          placeholder="Select Time">
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-8 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>Date Range</h5>
+      </div>
+      <div class="card-body">
+        <div class="input-daterange input-group">
+          <input class="form-control text-left" mwlFlatpickr [flatpickrOptions]="rangePickerOptions"
+            placeholder="YYYY-MM-DD" placeholder="Select Time">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ bootstrap-datetimepicker ] End -->
+</div>

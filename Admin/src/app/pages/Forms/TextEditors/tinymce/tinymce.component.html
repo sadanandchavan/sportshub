@@ -1,0 +1,50 @@
+<app-breadcrumb [Title]="'Forms'" [pageTitle]="'TinyMCE'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ form-element ] start -->
+  <div class="col-lg-6">
+    <!-- app.component.html -->
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Demo</h5>
+      </div>
+      <div class="card-body">
+        <editor [init]="editorConfig" [(ngModel)]="content" apiKey="your-tinymce-api-key"></editor>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <h5>TinyMCE with Toolbar</h5>
+      </div>
+      <div class="card-body">
+        <editor [init]="editorConfig1" [(ngModel)]="content1" apiKey="your-tinymce-api-key"></editor>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>TinyMCE with Plugins</h5>
+      </div>
+      <div class="card-body">
+        <editor [init]="editorConfig2" [(ngModel)]="content2" apiKey="your-tinymce-api-key"></editor>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>TinyMCE with All features</h5>
+      </div>
+      <div class="card-body">
+        <editor [init]="editorConfig3" [(ngModel)]="content3" apiKey="your-tinymce-api-key"></editor>
+      </div>
+    </div>
+  </div>
+  <!-- [ form-element ] end -->
+</div>

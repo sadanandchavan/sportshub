@@ -1,0 +1,88 @@
+<app-breadcrumb [Title]="'Online Courses'" [pageTitle]="'Site'"></app-breadcrumb>
+
+<div class="row">
+    <!-- [ sample-page ] start -->
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Site</h5>
+            </div>
+            <div class="card-body">
+                <div id="basicwizard" class="form-wizard row justify-content-center">
+                    <ul class="nav nav-pills justify-content-center course-wizard">
+                        <li class="nav-item" (click)="selectTab(1)">
+                            <a [class.active]="selectedTab === 1" class="nav-link">
+                                <div class="course-wizard-num">
+                                    <span>1</span>
+                                </div>
+                                <span class="d-none d-sm-inline">Theme</span>
+                            </a>
+                        </li>
+                        <!-- end nav item -->
+                        <li class="nav-item" (click)="selectTab(2)">
+                            <a [class.active]="selectedTab === 2" class="nav-link">
+                                <div class="course-wizard-num">
+                                    <span>2</span>
+                                </div>
+                                <span class="d-none d-sm-inline">Domain</span>
+                            </a>
+                        </li>
+                        <!-- end nav item -->
+                        <li class="nav-item" (click)="selectTab(3)">
+                            <a [class.active]="selectedTab === 3" class="nav-link">
+                                <div class="course-wizard-num">
+                                    <span>3</span>
+                                </div>
+                                <span class="d-none d-sm-inline">Bio</span>
+                            </a>
+                        </li>
+                        <!-- end nav item -->
+                        <li class="nav-item" (click)="selectTab(4)">
+                            <a [class.active]="selectedTab === 4" class="nav-link">
+                                <div class="course-wizard-num">
+                                    <span>4</span>
+                                </div>
+                                <span class="d-none d-sm-inline">Page</span>
+                            </a>
+                        </li>
+                        <!-- end nav item -->
+                    </ul>
+                    <div class="tab-content">
+                        <div *ngIf="selectedTab === 1" class="tab-pane show active">
+                            <app-theme-section></app-theme-section>
+                        </div>
+
+                        <div *ngIf="selectedTab === 2" class="tab-pane show active">
+                            <app-domain-section></app-domain-section>
+                        </div>
+
+                        <div *ngIf="selectedTab === 3" class="tab-pane show active">
+                            <app-bio-section></app-bio-section>
+                        </div>
+
+                        <div *ngIf="selectedTab === 4" class="tab-pane show active">
+                            <app-page-section></app-page-section>
+                        </div>
+
+                        <div class="d-sm-flex wizard justify-content-between mt-3">
+                            <div class="first" (click)="selectedTab !== 1 && selectTab(1)">
+                                <span class="btn btn-secondary" [class.disabled]="selectedTab === 1"> First </span>
+                            </div>
+                            <div class="d-sm-flex">
+                                <div class="previous me-2" (click)="selectedTab > 1 && selectTab(selectedTab - 1)">
+                                    <span class="btn btn-secondary mt-3 mt-md-0" [class.disabled]="selectedTab === 1"> Back To Previous </span>
+                                </div>
+                                <div class="next" (click)="selectedTab < 4 && selectTab(selectedTab + 1)">
+                                    <span class="btn btn-secondary mt-3 mt-md-0" [class.disabled]="selectedTab === 4"> Next Step </span>
+                                </div>
+                            </div>
+                            <div class="last" (click)="selectedTab !== 4 && selectTab(4)">
+                                <span class="btn btn-secondary mt-3 mt-md-0" [class.disabled]="selectedTab === 4"> Finish </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

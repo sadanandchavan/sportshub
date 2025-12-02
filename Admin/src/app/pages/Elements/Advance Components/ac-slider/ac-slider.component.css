@@ -1,0 +1,75 @@
+/* General Styles */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    /* Adjust height as needed */
+}
+
+.vertical-carousel-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    /* Adjust height as needed */
+}
+
+.carousel-inner {
+    display: flex;
+    /* Default horizontal direction, will be overridden for vertical */
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Make items fill the container */
+}
+
+/* Vertical Carousel Specific Styles */
+.vertical-carousel-container .carousel-inner {
+    flex-direction: column;
+    /* Stack items vertically */
+    height: 100%;
+    /* Ensure inner container takes full height */
+}
+
+/* Optional: Styling for navigation arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.carousel-indicators {
+    position: unset;
+}
+
+.carousel-indicators button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background: #ddd;
+}
+
+.customize-active{
+    border-color: #04a9f5;
+}

@@ -1,0 +1,49 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Basic initialization'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Table</h5>
+        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-simple">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Ext.</th>
+                <th>City</th>
+                <th>Start Date</th>
+                <th>Completion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let person of (filteredPeople | paginate: { itemsPerPage: itemsPerPage, currentPage: p })">
+                <td>{{ person.name }}</td>
+                <td>{{ person.ext }}</td>
+                <td>{{ person.city }}</td>
+                <td>{{ person.startDate }}</td>
+                <td>{{ person.completion }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>

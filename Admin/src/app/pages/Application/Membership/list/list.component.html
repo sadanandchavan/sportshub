@@ -1,0 +1,69 @@
+<app-breadcrumb [Title]="'Membership'" [pageTitle]="'Membership List'"></app-breadcrumb>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card table-card">
+            <div class="card-header">
+                <h5>Membership list</h5>
+            </div>
+            <div class="card-body pt-3">
+                <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2" />
+                <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+                    <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+                </select>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th (click)="sortBy('name')">Name</th>
+                                <th (click)="sortBy('mobile')">Mobile</th>
+                                <th (click)="sortBy('startDate')">Start Date</th>
+                                <th (click)="sortBy('status')">Status</th>
+                                <th (click)="sortBy('plan')">Plan</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let member of  (filteredMembers | paginate: { itemsPerPage: itemsPerPage, currentPage: p })">
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img [src]="member.imageUrl" alt="user image" class="img-radius wid-40" />
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6 class="mb-0">{{ member.name }}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>{{ member.mobile }}</td>
+                                <td>{{ member.startDate }} <span class="text-muted text-sm d-block">09:05 PM</span></td>
+                                <td [ngClass]="{'text-success': member.status === 'Active', 'text-secondary': member.status === 'Inactive'}">
+                                    <i class="fas fa-circle f-10 m-r-10"></i> {{ member.status }}
+                                </td>
+                                <td>
+                                    <span class="badge" [ngClass]=" {'text-bg-success': member.plan==='Casual' , 'text-bg-primary' : member.plan==='Addicted' , 'text-bg-warning' : member.plan==='Diehard' }"> 
+                                        {{ member.plan }}
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-eye f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-edit f-20"></i>
+                                    </a>
+                                    <a href="#" class="avtar avtar-xs btn-link-secondary">
+                                        <i class="ti ti-trash f-20"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+                <!-- Add pagination if needed -->
+            </div>
+        </div>
+    </div>
+</div>

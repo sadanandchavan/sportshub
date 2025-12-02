@@ -1,0 +1,28 @@
+<app-breadcrumb [Title]="'Membership'" [pageTitle]="'Pricing'"></app-breadcrumb>
+
+<!-- [ Main Content ] start -->
+<div class="row">
+    <div class="col-12">
+        <div class="row g-4">
+            <!-- [ sample-page ] start -->
+            <div *ngFor="let card of pricingCards" class="col-md-6 col-lg-4">
+                <div class="card price-card p-4 border border-{{ card.colorClass }} border-2 h-100">
+                    <div class="card-body bg-{{ card.colorClass }} bg-opacity-10 rounded v3">
+                        <div class="price-head v3">
+                            <h4 class="mb-0 {{ card.textColorClass }}">{{ card.title }}</h4>
+                            <div class="price-price mt-3">${{ card.price }} <span class="text-muted"> month</span></div>
+                        </div>
+                        <ul class="list-group list-group-flush product-list v3">
+                            <li *ngFor="let feature of card.features" class="list-group-item enable">
+                                <i class="ti ti-check {{ card.textColorClass }}"></i> {{ feature }}
+                            </li>
+                        </ul>
+                        <div class="d-grid"><a class="btn btn-dark mt-4" href="#">Buy Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ sample-page ] end -->
+        </div>
+    </div>
+</div>
+<!-- [ Main Content ] end -->

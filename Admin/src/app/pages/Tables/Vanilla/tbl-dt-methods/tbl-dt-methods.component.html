@@ -1,0 +1,94 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Table Methods'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Tables Methods</h5>
+        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body table-border-style">
+        <div class="form-group">
+          <button type="button" class="btn btn-sm btn-light-primary main" id="init">Init</button>
+          <button type="button" class="btn btn-sm btn-light-danger main" id="destroy">Destroy</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-methods">
+            <thead>
+              <tr>
+                <th *ngIf="columns[0].visible" (click)="sortTable('select')">Select</th>
+                <th *ngIf="columns[1].visible" (click)="sortTable('customer')">Customer</th>
+                <th *ngIf="columns[2].visible" (click)="sortTable('version')">Version</th>
+                <th *ngIf="columns[3].visible" (click)="sortTable('plannedUpgrade')" data-type="date"
+                  data-format="DD.MM.YYYY">Planned upgrade</th>
+                <th *ngIf="columns[4].visible" (click)="sortTable('dbInfo')">DB-Info</th>
+                <th *ngIf="columns[5].visible" (click)="sortTable('websiteInfo')">Website info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of sortedData | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                <td *ngIf="columns[0].visible">{{ row.select }}</td>
+                <td *ngIf="columns[1].visible" [innerHTML]="row.customer"></td>
+                <td *ngIf="columns[2].visible">{{ row.version }}</td>
+                <td *ngIf="columns[3].visible">{{ row.plannedUpgrade }}</td>
+                <td *ngIf="columns[4].visible" [innerHTML]="row.dbInfo"></td>
+                <td *ngIf="columns[5].visible" [innerHTML]="row.websiteInfo"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="hide">
+              <h5>Column Visibility</h5>
+              <div class="form-group" id="columns">
+                <div *ngFor="let column of columns; let i = index">
+                  <input type="checkbox" [checked]="column.visible" (change)="toggleColumnVisibility(i)" />
+                  {{ column.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5>Import / Export Data</h5>
+            <div class="form-group">
+              <textarea #dataInput cols="30" rows="2" class="form-control"
+                placeholder="Paste your csv or json string here..."></textarea>
+            </div>
+
+            <div class="form-group btn-page">
+              <button (click)="importData(dataInput.value)" type="button" class="btn btn-light-primary btn-sm import"
+                data-type="csv">Import
+                CSV</button>
+              <button type="button" class="btn btn-light-primary btn-sm import" data-type="json">Import JSON</button>
+              <button (click)="exportData('csv')" type="button" class="btn btn-light-success btn-sm export"
+                data-type="csv">Export CSV</button>
+              <button (click)="exportData('sql')" type="button" class="btn btn-light-success btn-sm export"
+                data-type="sql">Export SQL</button>
+              <button (click)="exportData('json')" type="button" class="btn btn-light-success btn-sm export"
+                data-type="json">Export JSON</button>
+
+            </div>
+            <div class="form-group">
+              <small>NOTE: The csv column delimiters and line delimiters are set to <code>","</code> and
+                <code>"\n"</code> respectively.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>

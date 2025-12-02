@@ -1,0 +1,48 @@
+<app-breadcrumb [Title]="'Table'" [pageTitle]="'Export'"></app-breadcrumb>
+
+<div class="row">
+  <!-- [ basic-table ] start -->
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Basic Table</h5>
+        <span class="d-block m-t-5">use class <code>table</code> inside table element</span>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input -->
+        <input type="text" [(ngModel)]="searchText" (ngModelChange)="filterData()" placeholder="Search..."
+          class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown -->
+        <select [(ngModel)]="itemsPerPage" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+
+      <div class="card-body table-border-style">
+        <button class="btn btn-light-primary mb-1 btn-sm csv" (click)="exportCSV()">Export CSV</button>
+        <button class="btn btn-light-primary mb-1 btn-sm sql" (click)="exportSQL()">Export SQL</button>
+        <button class="btn btn-light-primary mb-1 btn-sm txt" (click)="exportTXT()">Export TXT</button>
+        <button class="btn btn-light-primary mb-1 btn-sm json" (click)="exportJSON()">Export JSON</button>
+
+        <div class="table-responsive">
+          <table class="table" id="pc-dt-export">
+            <thead>
+              <tr>
+                <th *ngFor="let heading of headings">{{ heading }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let person of (filteredPeople | paginate: { itemsPerPage: itemsPerPage, currentPage: p })">
+                <td *ngFor="let cell of person">{{ cell }}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [ basic-table ] end -->
+</div>

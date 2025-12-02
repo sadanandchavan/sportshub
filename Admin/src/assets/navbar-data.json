@@ -1,0 +1,972 @@
+[
+  {
+    "menuName": "Navigation",
+    "menuItems": [
+      {
+        "text": "Dashboard",
+        "icon": "ph-gauge",
+        "badge": "2",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Analytics",
+            "link": "/"
+          },
+          {
+            "text": "Affiliate",
+            "link": "/affiliate"
+          },
+          {
+            "text": "Finance",
+            "link": "/finance"
+          },
+          {
+            "text": "Helpdesk",
+            "link": "/helpdesk"
+          },
+          {
+            "text": "Invoice",
+            "link": "/invoice"
+          }
+        ]
+      },
+      {
+        "text": "Layouts",
+        "icon": "ph-layout",
+        "subMenus": [
+          {
+            "text": "Horizontal",
+            "link": "/layout-horizontal"
+          },
+          {
+            "text": "Vertical",
+            "link": "/layout-vertical"
+          },
+          {
+            "text": "Vertical + Tab",
+            "link": "/layout-vertical-tab"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menuName": "Widget",
+    "menuItems": [
+      {
+        "text": "Statistics",
+        "icon": "ph-projector-screen-chart",
+        "link": "/statistics",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "User",
+        "icon": "ph-identification-card",
+        "link": "/user",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Data",
+        "icon": "ph-database",
+        "link": "/data",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Chart",
+        "icon": "ph-chart-pie",
+        "link": "/chart",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      }
+    ]
+  },
+  {
+    "menuName": "Application",
+    "menuItems": [
+      {
+        "text": "Calender",
+        "icon": "ph-calendar-blank",
+        "link": "/calender",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Chat",
+        "icon": "ph-chats-circle",
+        "link": "/chat",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Gallery",
+        "icon": "ph-image",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Grid",
+            "link": "/gallery-grid"
+          },
+          {
+            "text": "Masonry",
+            "link": "/gallery-masonry"
+          }
+        ]
+      },
+      {
+        "text": "Ecommerce",
+        "icon": "ph-shopping-cart",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Product",
+            "link": "/e-commerce-product"
+          },
+          {
+            "text": "Product-Detail",
+            "link": "/e-commerce-product-details"
+          },
+          {
+            "text": "Product-List",
+            "link": "/e-commerce-product-list"
+          },
+          {
+            "text": "Product Add",
+            "link": "/e-commerce-product-add"
+          },
+          {
+            "text": "Checkout",
+            "link": "/e-commerce-product-checkout"
+          }
+        ]
+      },
+      {
+        "text": "Helpdesk",
+        "icon": "ph-lifebuoy",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Dashboard",
+            "link": "/helpdesk"
+          },
+          {
+            "text": "Ticket",
+            "innerSubMenu": [
+              {
+                "text": "Create",
+                "link": "/ticket-create"
+              },
+              {
+                "text": "List",
+                "link": "/ticket-list"
+              },
+              {
+                "text": "Details",
+                "link": "/ticket-details"
+              }
+            ]
+          },
+          {
+            "text": "Customer",
+            "link": "/helpdesk-customer"
+          }
+        ]
+      },
+      {
+        "text": "Invoice 1",
+        "icon": "ph-newspaper",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Invoice List",
+            "link": "/invoice-one-list"
+          },
+          {
+            "text": "Create",
+            "link": "/invoice-one-create"
+          },
+          {
+            "text": "Preview",
+            "link": "/invoice-one-preview"
+          }
+        ]
+      },
+      {
+        "text": "Invoice 2",
+        "icon": "ph-newspaper",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Dashboard",
+            "link": "/invoice"
+          },
+          {
+            "text": "Create",
+            "link": "/invoice-two-create"
+          },
+          {
+            "text": "Details",
+            "link": "/invoice-two-view"
+          },
+          {
+            "text": "List",
+            "link": "/invoice-two-list"
+          },
+          {
+            "text": "Edit",
+            "link": "/invoice-two-edit"
+          }
+        ]
+      },
+      {
+        "text": "Mail",
+        "icon": "ph-envelope-open",
+        "link": "/mail",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Membership",
+        "icon": "ph-identification-badge",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Dashboard",
+            "link": "/membership"
+          },
+          {
+            "text": "List",
+            "link": "/membership-list"
+          },
+          {
+            "text": "Pricing",
+            "link": "/membership-pricing"
+          },
+          {
+            "text": "Setting",
+            "link": "/membership-setting"
+          }
+        ]
+      },
+      {
+        "text": "Online Courses",
+        "icon": "ph-books",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Dashboard",
+            "link": "/course"
+          },
+          {
+            "text": "Teacher",
+            "innerSubMenu": [
+              {
+                "text": "List",
+                "link": "/teacher-list"
+              },
+              {
+                "text": "Apply",
+                "link": "/teacher-apply"
+              },
+              {
+                "text": "Add",
+                "link": "/teacher-add"
+              }
+            ]
+          },
+          {
+            "text": "Student",
+            "innerSubMenu": [
+              {
+                "text": "List",
+                "link": "/student-list"
+              },
+              {
+                "text": "Apply",
+                "link": "/student-apply"
+              },
+              {
+                "text": "Add",
+                "link": "/student-add"
+              }
+            ]
+          },
+          {
+            "text": "Courses",
+            "innerSubMenu": [
+              {
+                "text": "View",
+                "link": "/course-view"
+              },
+              {
+                "text": "Add",
+                "link": "/course-add"
+              }
+            ]
+          },
+          {
+            "text": "Pricing",
+            "link": "/online-course-pricing"
+          },
+          {
+            "text": "Site",
+            "link": "/online-course-site"
+          },
+          {
+            "text": "Setting",
+            "innerSubMenu": [
+              {
+                "text": "Payment",
+                "link": "/online-course-setting-payment"
+              },
+              {
+                "text": "Pricing",
+                "link": "/online-course-setting-pricing"
+              },
+              {
+                "text": "Notifiction",
+                "link": "/online-course-setting-notifaction"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Plans",
+        "icon": "ph-currency-circle-dollar",
+        "link": "/applications-plans",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Users",
+        "icon": "ph-user-circle",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Account Profile",
+            "link": "/applications-users-account-profile"
+          },
+          {
+            "text": "Social media",
+            "link": "/applications-users-social-media"
+          },
+          {
+            "text": "User Card",
+            "link": "/applications-users-card"
+          },
+          {
+            "text": "User List",
+            "link": "/applications-users-list"
+          },
+          {
+            "text": "Team",
+            "link": "/applications-user-team"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menuName": "Pages",
+    "menuItems": [
+      {
+        "text": "Authentication",
+        "icon": "ph-shield-checkered",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Authentication 1",
+            "innerSubMenu": [
+              {
+                "text": "Login",
+                "link": "/login-v1"
+              },
+              {
+                "text": "Register",
+                "link": "/register-v1"
+              },
+              {
+                "text": "Forget Password",
+                "link": "/forgot-password-v1"
+              },
+              {
+                "text": "Reset Password",
+                "link": "/reset-password-v1"
+              },
+              {
+                "text": "Code Verification",
+                "link": "/code-verification-v1"
+              }
+            ]
+          },
+          {
+            "text": "Authentication 2",
+            "innerSubMenu": [
+              {
+                "text": "Login",
+                "link": "/login-v2"
+              },
+              {
+                "text": "Register",
+                "link": "/register-v2"
+              },
+              {
+                "text": "Forget Password",
+                "link": "/forgot-password-v2"
+              },
+              {
+                "text": "Reset Password",
+                "link": "/reset-password-v2"
+              },
+              {
+                "text": "Code Verification",
+                "link": "/code-verification-v2"
+              }
+            ]
+          },
+          {
+            "text": "Login Modal",
+            "link": "/login-modal"
+          }
+        ]
+      },
+      {
+        "text": "Maintenance",
+        "icon": "ph-wrench",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Error 404",
+            "link": "/error-404"
+          },
+          {
+            "text": "Connection Lost",
+            "link": "/connection-lost"
+          },
+          {
+            "text": "Under Construction",
+            "link": "/under-construction"
+          },
+          {
+            "text": "Comming Soon",
+            "link": "/coming-soon"
+          }
+        ]
+      },
+      {
+        "text": "Contact Us",
+        "icon": "ph-target",
+        "link": "/contact-us",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Landing",
+        "icon": "ph-rocket",
+        "link": "/landing",
+        "isLeadingPageIcon": true,
+        "subMenus": []
+      },
+      {
+        "text": "Loading",
+        "link": "/loading",
+        "icon": "ph-fan",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Search",
+        "icon": "ph-magnifying-glass",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Search Page",
+            "link": "/search-page"
+          },
+          {
+            "text": "Contact Search",
+            "link": "/contact-search"
+          }
+        ]
+      },
+      {
+        "text": "Site Settings",
+        "icon": "ph-globe",
+        "isLeadingPageIcon": false,
+        "link": "/page-settings",
+        "subMenus": []
+      }
+    ]
+  },
+  {
+    "menuName": "UI Components",
+    "menuItems": [
+      {
+        "text": "Components",
+        "icon": "ph-compass-tool",
+        "isLeadingPageIcon": true,
+        "link": "/bc-alert",
+        "subMenus": []
+      },
+      {
+        "text": "Animation",
+        "icon": "ph-flower",
+        "link": "/animation",
+        "isLeadingPageIcon": false,
+        "subMenus": []
+      },
+      {
+        "text": "Icons",
+        "icon": "ph-flower-lotus",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Feather",
+            "link": "/feather"
+          },
+          {
+            "text": "Font Awesome 5",
+            "link": "/fontawesome"
+          },
+          {
+            "text": "Matiral",
+            "link": "/material"
+          },
+          {
+            "text": "Tabler",
+            "link": "/tabler"
+          },
+          {
+            "text": "Phospher",
+            "link": "/phosphor"
+          },
+          {
+            "text": "Custom",
+            "link": "/custom"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menuName": "Forms",
+    "menuItems": [
+      {
+        "text": "Form Elements",
+        "icon": "ph-textbox",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Form Basic",
+            "link": "/form-basic"
+          },
+          {
+            "text": "Form Floating",
+            "link": "/form-floating"
+          },
+          {
+            "text": "Form Options",
+            "link": "/form-two-basic"
+          },
+          {
+            "text": "Form Groups",
+            "link": "/form-input-group"
+          },
+          {
+            "text": "Checkbox",
+            "link": "/form-checkbox"
+          },
+          {
+            "text": "Radio",
+            "link": "/form-radio"
+          },
+          {
+            "text": "Switch",
+            "link": "/form-switch"
+          },
+          {
+            "text": "Mega Option",
+            "link": "/form-megaoption"
+          }
+        ]
+      },
+      {
+        "text": "Form Plugins",
+        "icon": "ph-plug-charging",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Date",
+            "innerSubMenu": [
+              {
+                "text": "Date Picker",
+                "link": "/form-datepicker"
+              },
+              {
+                "text": "Timepicker",
+                "link": "/form-timepicker"
+              }
+            ]
+          },
+          {
+            "text": "Select",
+            "innerSubMenu": [
+              {
+                "text": "Choices js",
+                "link": "/form-choices"
+              }
+            ]
+          },
+          {
+            "text": "Rating",
+            "link": "/form-rating"
+          },
+          {
+            "text": "Google-Re-Captcha",
+            "link": "/form-recaptcha"
+          },
+          {
+            "text": "Input Mask",
+            "link": "/form-inputmask"
+          },
+          {
+            "text": "ClipBoard",
+            "link": "/form-clipboard"
+          },
+          {
+            "text": "TypeaHead",
+            "link": "/form-typeahead"
+          }
+        ]
+      },
+      {
+        "text": "Text Editor",
+        "icon": "ph-pen-nib",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Tinymce",
+            "link": "/tinymce"
+          },
+          {
+            "text": "Quill",
+            "link": "/quill"
+          },
+          {
+            "text": "CK editor",
+            "innerSubMenu": [
+              {
+                "text": "classic",
+                "link": "/editor-classic"
+              }
+            ]
+          },
+          {
+            "text": "Markdown",
+            "link": "/markdown"
+          }
+        ]
+      },
+      {
+        "text": "Form Layouts",
+        "icon": "ph-windows-logo",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Layouts",
+            "link": "/form-lay-default"
+          },
+          {
+            "text": "MultiColumn",
+            "link": "/form-lay-multicolumn"
+          },
+          {
+            "text": "ActionBars",
+            "link": "/form-lay-actionbars"
+          },
+          {
+            "text": "Sticky-ActionBar",
+            "link": "/form-lay-stickyactionbars"
+          }
+        ]
+      },
+      {
+        "text": "File Upload",
+        "icon": "ph-cloud-arrow-up",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Dropzone",
+            "link": "/file-upload"
+          }
+        ]
+      },
+      {
+        "text": "wizard",
+        "icon": "ph-cloud-arrow-up",
+        "isLeadingPageIcon": false,
+        "link": "/form-wizard",
+        "subMenus": []
+      },
+      {
+        "text": "Form Validation",
+        "icon": "duotone ph-password",
+        "isLeadingPageIcon": false,
+        "link": "/form-validation",
+        "subMenus": []
+      },
+      {
+        "text": "Images Cropper",
+        "icon": "ph-crop",
+        "isLeadingPageIcon": false,
+        "link": "/image-crop",
+        "subMenus": []
+      }
+    ]
+  },
+  {
+    "menuName": "Table",
+    "menuItems": [
+      {
+        "text": "Bootstrap Table",
+        "icon": "ph-table",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Basic Table",
+            "link": "/basic-table"
+          },
+          {
+            "text": "Sizing table",
+            "link": "/sizing-table"
+          },
+          {
+            "text": "Border table",
+            "link": "/border-table"
+          },
+          {
+            "text": "Styling table",
+            "link": "/styling-table"
+          }
+        ]
+      },
+      {
+        "text": "Vanilla table",
+        "icon": "ph-grid-nine",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Basic initialization",
+            "link": "/tbl-dt-simple"
+          },
+          {
+            "text": "Dynamic Import",
+            "link": "/tbl-dt-dynamic-import"
+          },
+          {
+            "text": "Column Manipulation",
+            "link": "/tbl-dt-column-manipulation"
+          },
+          {
+            "text": "Datetime Sorting",
+            "link": "/tbl-dt-datetime-sorting"
+          },
+          {
+            "text": "Methods",
+            "link": "/tbl-dt-methods"
+          },
+          {
+            "text": "Add Rows",
+            "link": "/tbl-dt-add-rows"
+          },
+          {
+            "text": "Fetch API",
+            "link": "/tbl-dt-fetch-api"
+          },
+          {
+            "text": "Filters",
+            "link": "/tbl-dt-filters"
+          },
+          {
+            "text": "Export",
+            "link": "/tbl-dt-export"
+          }
+        ]
+      },
+      {
+        "text": "Data Table",
+        "icon": "ph-text-columns",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Advance initialization",
+            "link": "/dt-advance"
+          },
+          {
+            "text": "Styling",
+            "link": "/dt-styling"
+          },
+          {
+            "text": "Api",
+            "link": "/dt-api"
+          },
+          {
+            "text": "Plug-in",
+            "link": "/dt-plugin"
+          },
+          {
+            "text": "Data sources",
+            "link": "/dt-sources"
+          }
+        ]
+      },
+      {
+        "text": "DT extensions",
+        "icon": "ph-wall",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Autofill",
+            "link": "/dt-ext-autofill"
+          },
+          {
+            "text": "Button",
+            "innerSubMenu": [
+              {
+                "text": "Basic button",
+                "link": "/dt-ext-basic-buttons"
+              },
+              {
+                "text": "Data export",
+                "link": "/dt-ext-export-buttons"
+              }
+            ]
+          },
+          {
+            "text": "Col reorder",
+            "link": "/dt-ext-col-reorder"
+          },
+          {
+            "text": "Fixed columns",
+            "link": "/dt-ext-fixed-columns"
+          },
+          {
+            "text": "Fixed header",
+            "link": "/dt-ext-fixed-header"
+          },
+          {
+            "text": "Fixed Table",
+            "link": "/dt-ext-key-table"
+          },
+          {
+            "text": "Responsive",
+            "link": "/dt-ext-responsive"
+          },
+          {
+            "text": "Row reorder",
+            "link": "/dt-ext-row-reorder"
+          },
+          {
+            "text": "Scroller",
+            "link": "/dt-ext-scroller"
+          },
+          {
+            "text": "Select table",
+            "link": "/dt-ext-select"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menuName": "Charts & Maps",
+    "menuItems": [
+      {
+        "text": "Charts",
+        "icon": "ph-chart-donut",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Apex Chart",
+            "link": "/chart-apex"
+          }
+        ]
+      },
+      {
+        "text": "Map",
+        "icon": "ph-grid-nine",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Vector Map",
+            "link": "/map-vector"
+          },
+          {
+            "text": "Google Map",
+            "link": "/map-gmap"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "menuName": "Others",
+    "menuItems": [
+      {
+        "text": "Menu levels",
+        "icon": "ph-tree-structure",
+        "isLeadingPageIcon": false,
+        "subMenus": [
+          {
+            "text": "Level 2.1",
+            "link": "javascript: void(0);"
+          },
+          {
+            "text": "Level 2.2",
+            "innerSubMenu": [
+              {
+                "text": "Level 3.1",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Level 3.2",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Level 3.3",
+                "link": "javascript: void(0);"
+              }
+            ]
+          },
+          {
+            "text": "Level 2.3",
+            "innerSubMenu": [
+              {
+                "text": "Level 3.1",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Level 3.2",
+                "link": "javascript: void(0);"
+              },
+              {
+                "text": "Level 3.3",
+                "link": "javascript: void(0);"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Sample Page",
+        "icon": "ph-desktop",
+        "isLeadingPageIcon": false,
+        "link": "/sample-page",
+        "subMenus": []
+      }
+    ]
+  }
+]

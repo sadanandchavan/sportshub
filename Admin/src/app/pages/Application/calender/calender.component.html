@@ -1,0 +1,29 @@
+<app-breadcrumb [Title]="'Application'" [pageTitle]="'Calendar'"></app-breadcrumb>
+
+<div class="row">
+    <div class="col-md-10 col-xxl-9 mb-4">
+        <h5>FullCalendar</h5>
+        <p class="text-muted">Full-sized drag & drop event calendar in JavaScript</p>
+        <div>
+            <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank" href="https://fullcalendar.io/">
+                <i class="ti ti-external-link me-1"></i>
+                Reference
+            </a>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body position-relative">
+                <full-calendar #calendar [options]="calendarOptions"></full-calendar>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end cal-event-offcanvas" tabindex="-1" id="calendar-add_edit_event" [ngClass]="{'show': currantllyOpenPopup === AddOrEditPopup }">
+    <app-add-edit-calender-info [calenderData]="selectedEvent" (close)="closeAddOrEditPopup($event)" (eventAdded)="onEventAdded($event)" *ngIf="currantllyOpenPopup === AddOrEditPopup">
+    </app-add-edit-calender-info>
+</div>

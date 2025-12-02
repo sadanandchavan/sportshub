@@ -1,0 +1,32 @@
+.table-container {
+  max-height: 400px;  /* Set your preferred height */
+  overflow-y: auto;   /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Optional: Add a border for better visual separation */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #fff; /* Background color to ensure visibility */
+  z-index: 1; /* Ensure the header stays on top */
+  border-bottom: 2px solid #ddd; /* Optional: Add a border for the header */
+}
+
+.table th, .table td {
+  white-space: nowrap; /* Prevents text from wrapping */
+  padding: 8px; /* Adjust padding as needed */
+  text-align: left;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f9f9f9; /* Optional: Add striping for rows */
+}
+
+.table-bordered th, .table-bordered td {
+  border: 1px solid #ddd; /* Add border to table cells */
+}

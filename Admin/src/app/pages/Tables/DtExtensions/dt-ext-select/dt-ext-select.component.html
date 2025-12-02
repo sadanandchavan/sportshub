@@ -1,0 +1,237 @@
+<app-breadcrumb [Title]="'DataTable'" [pageTitle]="'Select'"></app-breadcrumb>
+
+
+<div class="row">
+  <!-- prettier-ignore -->
+  <div class="col-md-10 col-xxl-9 mb-4">
+    <h5>DataTables Extensions</h5>
+    <p class="text-muted">The features that DataTables provides can be greatly enhanced by the use of the plug-ins
+      available on this page, which give many new user interaction and configuration options.</p>
+    <div>
+      <a class="btn btn-sm btn-light-dark rounded-pill px-2" role="button" target="_blank"
+        href="https://datatables.net/extensions/index">
+        <i class="ti ti-external-link me-1"></i>
+        Reference
+      </a>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <!-- Single Select table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Simple Initialization</h5>
+        <small>This example simply shows a table with selectable rows. For examples that actually do something with
+          those selected rows,
+          please see the other examples in this section!</small>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input for First Table -->
+        <input type="text" [(ngModel)]="searchText1" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown for First Table -->
+        <select [(ngModel)]="itemsPerPage1" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="single-select" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of tableData | paginate: { itemsPerPage: itemsPerPage1, currentPage: p1 }"
+                [ngClass]="{ 'selected': isSelected(data) }" (click)="selectRow(data)">
+                <td>{{ data.name }}</td>
+                <td>{{ data.position }}</td>
+                <td>{{ data.office }}</td>
+                <td>{{ data.age }}</td>
+                <td>{{ data.startDate }}</td>
+                <td>{{ data.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p1 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Single Select table end -->
+  <!-- Multi Select table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Multi Item Selection</h5>
+        <small>This example shows the multi option. Note how a click on a row will toggle its selected state without
+          effecting other
+          rows, unlike the os and single options shown in other examples.</small>
+      </div>
+      <div class="table-controls">
+        <!-- Search Input for First Table -->
+        <input type="text" [(ngModel)]="searchText2" placeholder="Search..." class="form-control mb-2" />
+
+        <!-- Entries per Page Dropdown for First Table -->
+        <select [(ngModel)]="itemsPerPage2" class="form-control mb-2">
+          <option *ngFor="let option of entriesOptions" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="multi-select" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of tableDataTwo | paginate: { itemsPerPage: itemsPerPage2, currentPage: p2 }"
+                [ngClass]="{ 'selected': isSelected(data) }" (click)="selectRow(data)">
+                <td>{{ data.name }}</td>
+                <td>{{ data.position }}</td>
+                <td>{{ data.office }}</td>
+                <td>{{ data.age }}</td>
+                <td>{{ data.startDate }}</td>
+                <td>{{ data.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p2 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Multi Select table end -->
+  <!-- Cell Select table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Cell Selection</h5>
+        <small>This example shows cell selection using the select.items option. Note that the os selection style to
+          select multiple
+          items will work equally well with cell selection as it does with row selection.</small>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="cell-select" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of tableDataThree | paginate: { itemsPerPage: itemsPerPage3, currentPage: p3 }">
+                <td>{{ data.name }}</td>
+                <td>{{ data.position }}</td>
+                <td>{{ data.office }}</td>
+                <td>{{ data.age }}</td>
+                <td>{{ data.startDate }}</td>
+                <td>{{ data.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p3 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cell Select table end -->
+  <!-- Button Select table start -->
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Buttons</h5>
+        <small>Select provides a number of buttons that can be used with the Buttons extension for DataTables. Buttons
+          is a framework
+          providing common options, styling and API methods for buttons that can control a DataTable.</small>
+      </div>
+      <div class="card-body">
+        <div class="dt-responsive table-responsive">
+          <table id="button-select" class="table table-striped table-bordered nowrap">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of tableDataFour | paginate: { itemsPerPage: itemsPerPage4, currentPage: p4 }">
+                <td>{{ data.name }}</td>
+                <td>{{ data.position }}</td>
+                <td>{{ data.office }}</td>
+                <td>{{ data.age }}</td>
+                <td>{{ data.startDate }}</td>
+                <td>{{ data.salary }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+          <pagination-controls (pageChange)="p4 = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button Select table end -->
+</div>
