@@ -1,10 +1,19 @@
 {
     "version": 2,
-    "outputDirectory": "dist/lightable/browser",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build"
+        }
+    ],
     "routes": [
         {
-            "src": "/(.*)",
+            "handle": "filesystem"
+        },
+        {
+            "src": "/.*",
             "dest": "/index.html"
         }
-    ]
+    ],
+    "outputDirectory": "dist/lightable/browser"
 }
