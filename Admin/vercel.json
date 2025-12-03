@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "outputDirectory": "dist/lightable",
+    "outputDirectory": "dist/lightable/browser",
     "routes": [
         {
             "src": "/(.*)",
